@@ -1,0 +1,7 @@
+,battery electric vehicle,natural gas vehicle,gasoline vehicle,diesel vehicle,plugin hybrid vehicle,nonroad vehicle
+LDVs,0.00017571,9.88E-05,9.27E-05,1.01E-04,0,0
+HDVs,0.001474392,0.000741478,0,0.000966426,0,0
+aircraft,0,0,0,0,0,6.81E-05
+rail,0,0,0,0,0,0.002680107
+ships,0,0,0,0,0,0.001347191
+motorbikes,0,0,0,0,0,0

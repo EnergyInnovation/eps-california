@@ -1,0 +1,7 @@
+Building Component,Urban Residential,Rural Residential,Commercial
+heating,0.05,0.05,0.05
+cooling and ventilation,0.05,0.05,0.05
+envelope,0,0,0
+lighting,0,0,0.25
+appliances,0,0,0
+other component,0,0,0
