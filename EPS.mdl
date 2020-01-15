@@ -26637,9 +26637,8 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 1,138,137,89,0,0,0,0,0,128,0,-1--1--1,,1|(2504,822)|
 ///---\\\
 :L<%^E!@
-1:No settings.vdfx
 8:GraphDefinitions.vgd
-9:No settings
+9:MostRecentRun
 22:$,Dollar,Dollars,$s
 22:acre,acres
 22:btu,btus
@@ -26664,11 +26663,11 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 22:Year,Years,yr,yrs
 23:0
 15:0,0,0,0,0,0
-19:110,3
+19:90,0
 27:0,
 34:0,
 4:Time
-5:Vehicles[HDVs,freight,gasoline vehicle]
+5:Output Total CO2e Emissions
 35:Date
 36:YYYY-MM-DD
 37:2000
@@ -26686,8 +26685,8 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 80:0
 81:0
 24:2018
-25:2030
-26:2030
+25:2050
+26:2050
 75:
 43:
 6:agriculture
