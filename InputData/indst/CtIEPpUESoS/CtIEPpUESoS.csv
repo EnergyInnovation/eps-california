@@ -1,8 +1,8 @@
 Policy,Cost per Unit Energy (2017$/BTU)
-early eqpt retirement,0
+early eqpt retirement,1.62E-04
 proper installation and use of eqpt,0
-cogeneration and waste heat recovery,0
-eqpt efficiency stds,4.21E-06
-substitute other fuels for coal,3.26E-06
+cogeneration and waste heat recovery,2.55849E-05
+eqpt efficiency stds,6.07E-06
+substitute other fuels for coal,5.32E-06
 substitute other fuels for natural gas,9.49E-06
 research and development,0
