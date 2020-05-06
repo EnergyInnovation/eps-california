@@ -1,7 +1,7 @@
 ,Urban Residential,Rural Residential,Commercial
-heating,-0.195121951,-0.195121951,-0.193458312
-cooling and ventilation,-0.161211019,-0.161211019,-0.154557285
-envelope,-0.1175,-0.1175,-0.1175
-lighting,-0.426959047,-0.426959047,-0.664678341
-appliances,-0.171543651,-0.171543651,-0.276180114
-other,-0.426428571,-0.426428571,-0.4125
+heating,-0.195,-0.195,-0.193
+cooling and ventilation,-0.161,-0.161,-0.155
+envelope,-0.118,-0.118,-0.118
+lighting,-0.427,-0.427,-0.665
+appliances,-0.172,-0.172,-0.276
+other,-0.426,-0.426,-0.413

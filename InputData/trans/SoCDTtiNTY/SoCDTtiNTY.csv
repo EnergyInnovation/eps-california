@@ -1,7 +1,7 @@
 ,passenger,freight
-LDVs,0.07692,0.085
-HDVs,0.0624,0.045
-aircraft,0.04,0.05
-rail,0.03,0.0295
+LDVs,0.0769,0.0850
+HDVs,0.0624,0.0450
+aircraft,0.0400,0.0500
+rail,0.0300,0.0295
 ships,0.0298,0.0298
-motorbikes,0.11,0
+motorbikes,0.1100,0.0000

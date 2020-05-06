@@ -1,6 +1,6 @@
 ,battery electric vehicle,natural gas vehicle,gasoline vehicle,diesel vehicle,plugin hybrid vehicle,nonroad vehicle
-LDVs,18060.04753,18060.04753,15723.5672,18060.04753,18060.04753,0
-HDVs,13630.20065,13630.20065,13630.20065,13630.20065,13630.20065,0
+LDVs,18060,18060,15724,18060,18060,0
+HDVs,13630,13630,13630,13630,13630,0
 aircraft,0,0,0,0,0,1
 rail,0,0,0,0,0,1
 ships,0,0,0,0,0,1

@@ -1,9 +1,22 @@
-Industry,electricity,coal,natural gas,biomass,petroleum diesel,heat
-cement and other carbonates,0,0,-0.5,0,0,0
-natural gas and petroleum systems,0,0,-0.5,0,0,0
-iron and steel,0,0,-0.5,0,0,0
-chemicals,0,0,-0.5,0,0,0
-mining,0,0,-0.5,0,0,0
-waste management,0,0,-0.5,0,0,0
-agriculture,0,0,-0.5,0,0,0
-other industries,0,0,-0.5,0,0,0
+Industry,electricity,coal,natural gas,biomass,petroleum diesel,heat,,,
+cement and other carbonates,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+natural gas and petroleum systems,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+iron and steel,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+chemicals,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+mining,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+waste management,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+agriculture,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+other industries,0.00,0.00,-0.50,0.00,0.00,0.00,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
