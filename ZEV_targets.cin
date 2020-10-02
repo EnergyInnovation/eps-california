@@ -1,0 +1,7 @@
+Additional LCFS Percentage = 0.127
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 0.61
+Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 0.4
+Additional Minimum Required EV Sales Percentage[passenger,motorbikes] = 0.68
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = 0.4
+Additional Minimum Required EV Sales Percentage[freight,HDVs] = 0.4
+Policy Implementation Schedule Selector = 4
