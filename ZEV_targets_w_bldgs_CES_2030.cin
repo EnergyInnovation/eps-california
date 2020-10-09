@@ -1,0 +1,11 @@
+Additional LCFS Percentage = 0.127
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 0.61
+Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 0.4
+Additional Minimum Required EV Sales Percentage[passenger,motorbikes] = 0.68
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = 0.4
+Additional Minimum Required EV Sales Percentage[freight,HDVs] = 0.4
+Additional Renewable Portfolio Std Percentage = 0.534267
+Percent New Nonelec Component Sales Shifted to Elec[urban residential] = 1
+Percent New Nonelec Component Sales Shifted to Elec[rural residential] = 0.667
+Percent New Nonelec Component Sales Shifted to Elec[commercial] = 0.667
+Policy Implementation Schedule Selector = 5
