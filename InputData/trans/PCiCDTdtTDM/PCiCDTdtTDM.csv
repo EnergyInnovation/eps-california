@@ -1,7 +1,7 @@
-Vehicle Type,passengers,freight
-LDVs,-0.2,-0.25
-HDVs,0,-0.25
-aircraft,0,-0.25
-rail,0,-0.25
-ships,0,-0.25
-motorbikes,-0.2,-0.25
+Percent Change (dimensionless),passengers,freight
+LDVs,-0.520,0
+HDVs,1.235,-0.350
+aircraft,-0.597,0
+rail,2.095,0.254
+ships,0,0
+motorbikes,-1,0

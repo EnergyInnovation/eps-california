@@ -1,0 +1,55 @@
+﻿eps_id,eia_api_id
+Distillate Fuel Oil,DFO
+Residual Fuel Oil,RFO
+Propane,PROP
+Petroleum Coke,PCK
+Other Petroleum 2/,ONP
+Natural Gas,NG
+Steam Coal,STC
+Metallurgical Coal,MTC
+Renewables,REB
+Purchased Electricity,PRC
+Liquefied Petroleum Gases,LPG
+Still Gas,SLG
+Natural Gas (Heat and Power),NG_HAP
+Natural Gas (Feedstocks),NG_FSK
+Natural Gas (Gas-to-Liquids Heat),NG_GTL
+Steam Coal 3/,STC
+Biofuels Heat and Coproducts,BFH
+Net Coke Imports,NCI
+HAP Residual Fuel Oil,HAP_RFO
+HAP Distillate Fuel Oil,HAP_DFO
+HAP Propane,HAP_PROP
+HAP Petroleum Coke,HAP_PCK
+HAP Other Petroleum 2/,HAP_ONP
+HAP Natural Gas,HAP_NG
+HAP Steam Coal,HAP_STC
+HAP Renewables,HAP_REB
+HAP Purchased Electricity,HAP_PRC
+FSK Liquefied Petroleum Gases and Other 3/,FSK_LPG
+FSK Petrochemical Feedstocks,FSK_PCF
+FSK Natural Gas,FSK_NG
+Other Petroleum 1/,ONP
+Lease and Plant Fuel 2/,LSAPFL
+Purchased Electricity excluding Oil Shale,PEO
+Purchased Electricity for Oil Shale,PES
+Motor Gasoline,MGS
+All Propane Heat and Power,LPGHP
+All Liquefied Petroleum Gas and Other Feedstocks,LPGF
+All Motor Gasoline,MGS
+All Distillate Fuel Oil,DFO
+All Residual Fuel Oil,RFO
+All Petrochemical Feedstocks,PCF
+All Petroleum Coke,PCK
+All Asphalt and Road Oil,ARO
+All Miscellaneous Petroleum,MPET
+All Natural Gas Heat and Power,NHP
+All Natural Gas Feedstocks,NGF
+All Lease and Plant Fuel,LSAPFL
+All Metallurgical Coal and Coke,MCC
+All Other Industrial Coal,OIC
+All Renewables,REB
+All Purchased Electricity,PRC
+All Delivered Energy,DELE
+All Electricity Related Losses,ERL
+Biofuels Heat and Coproducts,BFH

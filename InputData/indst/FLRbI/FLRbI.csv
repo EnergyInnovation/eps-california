@@ -1,9 +1,9 @@
-Industry,Leakage Rate
-cement and other carbonate use,0
-natural gas and petroleum systems,0
-iron and steel,0
-chemicals,0
-mining,0
+Industry,Leakage Rate (dimensionless)
+cement and other carbonate use,0.095
+natural gas and petroleum systems,-0.023
+iron and steel,0.150
+chemicals,0.265
+mining,-0.188
 waste management,0
-agriculture,0
-other industries,0
+agriculture,0.006
+other industries,0.034

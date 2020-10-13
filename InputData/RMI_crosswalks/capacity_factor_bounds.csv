@@ -1,0 +1,17 @@
+energy,min_CF,max_CF
+hard coal,0.4,0.7
+natural gas nonpeaker,0.5,0.7
+nuclear,0.8,1
+hydro,0.3,0.6
+onshore wind,0.2,0.6
+solar PV,0.05,0.4
+solar thermal,0.05,0.4
+biomass,0.4,0.7
+geothermal,0.5,0.9
+petroleum,0.01,0.1
+natural gas peaker,0.05,0.3
+lignite,0.3,0.7
+offshore wind,0.2,0.6
+crude oil,0.01,0.1
+heavy or residual fuel oil,0.01,0.1
+municipal solid waste,0.4,0.7

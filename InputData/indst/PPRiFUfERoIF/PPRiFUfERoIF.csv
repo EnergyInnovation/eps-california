@@ -1,9 +1,9 @@
-Industries,Perc Fuel Use Reduction
-cement and other carbonates,0
-natural gas and petroleum systems,0
-iron and steel,0
-chemicals,0
+Industries,Perc Fuel Use Reduction (dimensionless)
+cement and other carbonates,0.063
+natural gas and petroleum systems,0.045
+iron and steel,0.088
+chemicals,0.020
 mining,0
 waste management,0
 agriculture,0
-other industries,0
+other industries,0.016
