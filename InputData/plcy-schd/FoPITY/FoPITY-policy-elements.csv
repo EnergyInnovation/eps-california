@@ -1,0 +1,1304 @@
+Policy Element Subscript
+trans fuel economy standards X passenger X LDVs
+trans fuel economy standards X passenger X HDVs
+trans fuel economy standards X passenger X aircraft
+trans fuel economy standards X passenger X rail
+trans fuel economy standards X passenger X ships
+trans fuel economy standards X passenger X motorbikes
+trans fuel economy standards X freight X LDVs
+trans fuel economy standards X freight X HDVs
+trans fuel economy standards X freight X aircraft
+trans fuel economy standards X freight X rail
+trans fuel economy standards X freight X ships
+trans fuel economy standards X freight X motorbikes
+trans LDVs feebate X
+trans mode shifting X passenger X LDVs
+trans mode shifting X passenger X HDVs
+trans mode shifting X passenger X aircraft
+trans mode shifting X passenger X rail
+trans mode shifting X passenger X ships
+trans mode shifting X passenger X motorbikes
+trans mode shifting X freight X LDVs
+trans mode shifting X freight X HDVs
+trans mode shifting X freight X aircraft
+trans mode shifting X freight X rail
+trans mode shifting X freight X ships
+trans mode shifting X freight X motorbikes
+trans EV subsidy X passenger X LDVs
+trans EV subsidy X passenger X HDVs
+trans EV subsidy X passenger X aircraft
+trans EV subsidy X passenger X rail
+trans EV subsidy X passenger X ships
+trans EV subsidy X passenger X motorbikes
+trans EV subsidy X freight X LDVs
+trans EV subsidy X freight X HDVs
+trans EV subsidy X freight X aircraft
+trans EV subsidy X freight X rail
+trans EV subsidy X freight X ships
+trans EV subsidy X freight X motorbikes
+trans EV minimum X passenger X LDVs
+trans EV minimum X passenger X HDVs
+trans EV minimum X passenger X aircraft
+trans EV minimum X passenger X rail
+trans EV minimum X passenger X ships
+trans EV minimum X passenger X motorbikes
+trans EV minimum X freight X LDVs
+trans EV minimum X freight X HDVs
+trans EV minimum X freight X aircraft
+trans EV minimum X freight X rail
+trans EV minimum X freight X ships
+trans EV minimum X freight X motorbikes
+trans hydrogen vehicle minimum X passenger X LDVs
+trans hydrogen vehicle minimum X passenger X HDVs
+trans hydrogen vehicle minimum X passenger X aircraft
+trans hydrogen vehicle minimum X passenger X rail
+trans hydrogen vehicle minimum X passenger X ships
+trans hydrogen vehicle minimum X passenger X motorbikes
+trans hydrogen vehicle minimum X freight X LDVs
+trans hydrogen vehicle minimum X freight X HDVs
+trans hydrogen vehicle minimum X freight X aircraft
+trans hydrogen vehicle minimum X freight X rail
+trans hydrogen vehicle minimum X freight X ships
+trans hydrogen vehicle minimum X freight X motorbikes
+trans reduce EV range anxiety and charging time X
+trans EV charger deployment X
+trans LCFS X
+trans reduce regulated pollutants X LDVs X CO2
+trans reduce regulated pollutants X LDVs X VOC
+trans reduce regulated pollutants X LDVs X CO
+trans reduce regulated pollutants X LDVs X NOx
+trans reduce regulated pollutants X LDVs X PM10
+trans reduce regulated pollutants X LDVs X PM25
+trans reduce regulated pollutants X LDVs X SOx
+trans reduce regulated pollutants X LDVs X BC
+trans reduce regulated pollutants X LDVs X OC
+trans reduce regulated pollutants X LDVs X CH4
+trans reduce regulated pollutants X LDVs X N2O
+trans reduce regulated pollutants X LDVs X F gases
+trans reduce regulated pollutants X HDVs X CO2
+trans reduce regulated pollutants X HDVs X VOC
+trans reduce regulated pollutants X HDVs X CO
+trans reduce regulated pollutants X HDVs X NOx
+trans reduce regulated pollutants X HDVs X PM10
+trans reduce regulated pollutants X HDVs X PM25
+trans reduce regulated pollutants X HDVs X SOx
+trans reduce regulated pollutants X HDVs X BC
+trans reduce regulated pollutants X HDVs X OC
+trans reduce regulated pollutants X HDVs X CH4
+trans reduce regulated pollutants X HDVs X N2O
+trans reduce regulated pollutants X HDVs X F gases
+trans reduce regulated pollutants X aircraft X CO2
+trans reduce regulated pollutants X aircraft X VOC
+trans reduce regulated pollutants X aircraft X CO
+trans reduce regulated pollutants X aircraft X NOx
+trans reduce regulated pollutants X aircraft X PM10
+trans reduce regulated pollutants X aircraft X PM25
+trans reduce regulated pollutants X aircraft X SOx
+trans reduce regulated pollutants X aircraft X BC
+trans reduce regulated pollutants X aircraft X OC
+trans reduce regulated pollutants X aircraft X CH4
+trans reduce regulated pollutants X aircraft X N2O
+trans reduce regulated pollutants X aircraft X F gases
+trans reduce regulated pollutants X rail X CO2
+trans reduce regulated pollutants X rail X VOC
+trans reduce regulated pollutants X rail X CO
+trans reduce regulated pollutants X rail X NOx
+trans reduce regulated pollutants X rail X PM10
+trans reduce regulated pollutants X rail X PM25
+trans reduce regulated pollutants X rail X SOx
+trans reduce regulated pollutants X rail X BC
+trans reduce regulated pollutants X rail X OC
+trans reduce regulated pollutants X rail X CH4
+trans reduce regulated pollutants X rail X N2O
+trans reduce regulated pollutants X rail X F gases
+trans reduce regulated pollutants X ships X CO2
+trans reduce regulated pollutants X ships X VOC
+trans reduce regulated pollutants X ships X CO
+trans reduce regulated pollutants X ships X NOx
+trans reduce regulated pollutants X ships X PM10
+trans reduce regulated pollutants X ships X PM25
+trans reduce regulated pollutants X ships X SOx
+trans reduce regulated pollutants X ships X BC
+trans reduce regulated pollutants X ships X OC
+trans reduce regulated pollutants X ships X CH4
+trans reduce regulated pollutants X ships X N2O
+trans reduce regulated pollutants X ships X F gases
+trans reduce regulated pollutants X motorbikes X CO2
+trans reduce regulated pollutants X motorbikes X VOC
+trans reduce regulated pollutants X motorbikes X CO
+trans reduce regulated pollutants X motorbikes X NOx
+trans reduce regulated pollutants X motorbikes X PM10
+trans reduce regulated pollutants X motorbikes X PM25
+trans reduce regulated pollutants X motorbikes X SOx
+trans reduce regulated pollutants X motorbikes X BC
+trans reduce regulated pollutants X motorbikes X OC
+trans reduce regulated pollutants X motorbikes X CH4
+trans reduce regulated pollutants X motorbikes X N2O
+trans reduce regulated pollutants X motorbikes X F gases
+elec renewable portfolio standards X
+elec ban new power plants X hard coal es
+elec ban new power plants X natural gas nonpeaker es
+elec ban new power plants X nuclear es
+elec ban new power plants X hydro es
+elec ban new power plants X onshore wind es
+elec ban new power plants X solar PV es
+elec ban new power plants X solar thermal es
+elec ban new power plants X biomass es
+elec ban new power plants X geothermal es
+elec ban new power plants X petroleum es
+elec ban new power plants X natural gas peaker es
+elec ban new power plants X lignite es
+elec ban new power plants X offshore wind es
+elec ban new power plants X crude oil es
+elec ban new power plants X heavy or residual fuel oil es
+elec ban new power plants X municipal solid waste es
+elec generation subsidy X hard coal es
+elec generation subsidy X natural gas nonpeaker es
+elec generation subsidy X nuclear es
+elec generation subsidy X hydro es
+elec generation subsidy X onshore wind es
+elec generation subsidy X solar PV es
+elec generation subsidy X solar thermal es
+elec generation subsidy X biomass es
+elec generation subsidy X geothermal es
+elec generation subsidy X petroleum es
+elec generation subsidy X natural gas peaker es
+elec generation subsidy X lignite es
+elec generation subsidy X offshore wind es
+elec generation subsidy X crude oil es
+elec generation subsidy X heavy or residual fuel oil es
+elec generation subsidy X municipal solid waste es
+elec early retirement X hard coal es
+elec early retirement X natural gas nonpeaker es
+elec early retirement X nuclear es
+elec early retirement X hydro es
+elec early retirement X onshore wind es
+elec early retirement X solar PV es
+elec early retirement X solar thermal es
+elec early retirement X biomass es
+elec early retirement X geothermal es
+elec early retirement X petroleum es
+elec early retirement X natural gas peaker es
+elec early retirement X lignite es
+elec early retirement X offshore wind es
+elec early retirement X crude oil es
+elec early retirement X heavy or residual fuel oil es
+elec early retirement X municipal solid waste es
+elec lifetime extension X
+elec demand response X
+elec storage growth X
+elec transmission growth X
+elec avoid TND loss X
+elec reduce plant downtime X hard coal es X preexisting retiring
+elec reduce plant downtime X hard coal es X preexisting nonretiring
+elec reduce plant downtime X hard coal es X newly built
+elec reduce plant downtime X natural gas nonpeaker es X preexisting retiring
+elec reduce plant downtime X natural gas nonpeaker es X preexisting nonretiring
+elec reduce plant downtime X natural gas nonpeaker es X newly built
+elec reduce plant downtime X nuclear es X preexisting retiring
+elec reduce plant downtime X nuclear es X preexisting nonretiring
+elec reduce plant downtime X nuclear es X newly built
+elec reduce plant downtime X hydro es X preexisting retiring
+elec reduce plant downtime X hydro es X preexisting nonretiring
+elec reduce plant downtime X hydro es X newly built
+elec reduce plant downtime X onshore wind es X preexisting retiring
+elec reduce plant downtime X onshore wind es X preexisting nonretiring
+elec reduce plant downtime X onshore wind es X newly built
+elec reduce plant downtime X solar PV es X preexisting retiring
+elec reduce plant downtime X solar PV es X preexisting nonretiring
+elec reduce plant downtime X solar PV es X newly built
+elec reduce plant downtime X solar thermal es X preexisting retiring
+elec reduce plant downtime X solar thermal es X preexisting nonretiring
+elec reduce plant downtime X solar thermal es X newly built
+elec reduce plant downtime X biomass es X preexisting retiring
+elec reduce plant downtime X biomass es X preexisting nonretiring
+elec reduce plant downtime X biomass es X newly built
+elec reduce plant downtime X geothermal es X preexisting retiring
+elec reduce plant downtime X geothermal es X preexisting nonretiring
+elec reduce plant downtime X geothermal es X newly built
+elec reduce plant downtime X petroleum es X preexisting retiring
+elec reduce plant downtime X petroleum es X preexisting nonretiring
+elec reduce plant downtime X petroleum es X newly built
+elec reduce plant downtime X natural gas peaker es X preexisting retiring
+elec reduce plant downtime X natural gas peaker es X preexisting nonretiring
+elec reduce plant downtime X natural gas peaker es X newly built
+elec reduce plant downtime X lignite es X preexisting retiring
+elec reduce plant downtime X lignite es X preexisting nonretiring
+elec reduce plant downtime X lignite es X newly built
+elec reduce plant downtime X offshore wind es X preexisting retiring
+elec reduce plant downtime X offshore wind es X preexisting nonretiring
+elec reduce plant downtime X offshore wind es X newly built
+elec reduce plant downtime X crude oil es X preexisting retiring
+elec reduce plant downtime X crude oil es X preexisting nonretiring
+elec reduce plant downtime X crude oil es X newly built
+elec reduce plant downtime X heavy or residual fuel oil es X preexisting retiring
+elec reduce plant downtime X heavy or residual fuel oil es X preexisting nonretiring
+elec reduce plant downtime X heavy or residual fuel oil es X newly built
+elec reduce plant downtime X municipal solid waste es X preexisting retiring
+elec reduce plant downtime X municipal solid waste es X preexisting nonretiring
+elec reduce plant downtime X municipal solid waste es X newly built
+elec change imports X hard coal es
+elec change imports X natural gas nonpeaker es
+elec change imports X nuclear es
+elec change imports X hydro es
+elec change imports X onshore wind es
+elec change imports X solar PV es
+elec change imports X solar thermal es
+elec change imports X biomass es
+elec change imports X geothermal es
+elec change imports X petroleum es
+elec change imports X natural gas peaker es
+elec change imports X lignite es
+elec change imports X offshore wind es
+elec change imports X crude oil es
+elec change imports X heavy or residual fuel oil es
+elec change imports X municipal solid waste es
+elec change exports X
+elec non BAU mandated capacity construction X hard coal es
+elec non BAU mandated capacity construction X natural gas nonpeaker es
+elec non BAU mandated capacity construction X nuclear es
+elec non BAU mandated capacity construction X hydro es
+elec non BAU mandated capacity construction X onshore wind es
+elec non BAU mandated capacity construction X solar PV es
+elec non BAU mandated capacity construction X solar thermal es
+elec non BAU mandated capacity construction X biomass es
+elec non BAU mandated capacity construction X geothermal es
+elec non BAU mandated capacity construction X petroleum es
+elec non BAU mandated capacity construction X natural gas peaker es
+elec non BAU mandated capacity construction X lignite es
+elec non BAU mandated capacity construction X offshore wind es
+elec non BAU mandated capacity construction X crude oil es
+elec non BAU mandated capacity construction X heavy or residual fuel oil es
+elec non BAU mandated capacity construction X municipal solid waste es
+elec non BAU RPS qualifying resources X
+elec non BAU guaranteed dispatch X
+elec reduce soft costs X hard coal es
+elec reduce soft costs X natural gas nonpeaker es
+elec reduce soft costs X nuclear es
+elec reduce soft costs X hydro es
+elec reduce soft costs X onshore wind es
+elec reduce soft costs X solar PV es
+elec reduce soft costs X solar thermal es
+elec reduce soft costs X biomass es
+elec reduce soft costs X geothermal es
+elec reduce soft costs X petroleum es
+elec reduce soft costs X natural gas peaker es
+elec reduce soft costs X lignite es
+elec reduce soft costs X offshore wind es
+elec reduce soft costs X crude oil es
+elec reduce soft costs X heavy or residual fuel oil es
+elec reduce soft costs X municipal solid waste es
+elec capacity construction subsidy X hard coal es
+elec capacity construction subsidy X natural gas nonpeaker es
+elec capacity construction subsidy X nuclear es
+elec capacity construction subsidy X hydro es
+elec capacity construction subsidy X onshore wind es
+elec capacity construction subsidy X solar PV es
+elec capacity construction subsidy X solar thermal es
+elec capacity construction subsidy X biomass es
+elec capacity construction subsidy X geothermal es
+elec capacity construction subsidy X petroleum es
+elec capacity construction subsidy X natural gas peaker es
+elec capacity construction subsidy X lignite es
+elec capacity construction subsidy X offshore wind es
+elec capacity construction subsidy X crude oil es
+elec capacity construction subsidy X heavy or residual fuel oil es
+elec capacity construction subsidy X municipal solid waste es
+elec non BAU retirement schedule X hard coal es
+elec non BAU retirement schedule X natural gas nonpeaker es
+elec non BAU retirement schedule X nuclear es
+elec non BAU retirement schedule X hydro es
+elec non BAU retirement schedule X onshore wind es
+elec non BAU retirement schedule X solar PV es
+elec non BAU retirement schedule X solar thermal es
+elec non BAU retirement schedule X biomass es
+elec non BAU retirement schedule X geothermal es
+elec non BAU retirement schedule X petroleum es
+elec non BAU retirement schedule X natural gas peaker es
+elec non BAU retirement schedule X lignite es
+elec non BAU retirement schedule X offshore wind es
+elec non BAU retirement schedule X crude oil es
+elec non BAU retirement schedule X heavy or residual fuel oil es
+elec non BAU retirement schedule X municipal solid waste es
+elec CCS X hard coal es
+elec CCS X natural gas nonpeaker es
+elec CCS X nuclear es
+elec CCS X hydro es
+elec CCS X onshore wind es
+elec CCS X solar PV es
+elec CCS X solar thermal es
+elec CCS X biomass es
+elec CCS X geothermal es
+elec CCS X petroleum es
+elec CCS X natural gas peaker es
+elec CCS X lignite es
+elec CCS X offshore wind es
+elec CCS X crude oil es
+elec CCS X heavy or residual fuel oil es
+elec CCS X municipal solid waste es
+bldgs rebate X heating
+bldgs rebate X cooling and ventilation
+bldgs rebate X envelope
+bldgs rebate X lighting
+bldgs rebate X appliances
+bldgs rebate X other component
+bldgs efficiency standards X heating X urban residential
+bldgs efficiency standards X heating X rural residential
+bldgs efficiency standards X heating X commercial
+bldgs efficiency standards X cooling and ventilation X urban residential
+bldgs efficiency standards X cooling and ventilation X rural residential
+bldgs efficiency standards X cooling and ventilation X commercial
+bldgs efficiency standards X envelope X urban residential
+bldgs efficiency standards X envelope X rural residential
+bldgs efficiency standards X envelope X commercial
+bldgs efficiency standards X lighting X urban residential
+bldgs efficiency standards X lighting X rural residential
+bldgs efficiency standards X lighting X commercial
+bldgs efficiency standards X appliances X urban residential
+bldgs efficiency standards X appliances X rural residential
+bldgs efficiency standards X appliances X commercial
+bldgs efficiency standards X other component X urban residential
+bldgs efficiency standards X other component X rural residential
+bldgs efficiency standards X other component X commercial
+bldgs device labeling X
+bldgs contractor training X
+bldgs new component fuel shifting X heating X urban residential
+bldgs new component fuel shifting X heating X rural residential
+bldgs new component fuel shifting X heating X commercial
+bldgs new component fuel shifting X cooling and ventilation X urban residential
+bldgs new component fuel shifting X cooling and ventilation X rural residential
+bldgs new component fuel shifting X cooling and ventilation X commercial
+bldgs new component fuel shifting X envelope X urban residential
+bldgs new component fuel shifting X envelope X rural residential
+bldgs new component fuel shifting X envelope X commercial
+bldgs new component fuel shifting X lighting X urban residential
+bldgs new component fuel shifting X lighting X rural residential
+bldgs new component fuel shifting X lighting X commercial
+bldgs new component fuel shifting X appliances X urban residential
+bldgs new component fuel shifting X appliances X rural residential
+bldgs new component fuel shifting X appliances X commercial
+bldgs new component fuel shifting X other component X urban residential
+bldgs new component fuel shifting X other component X rural residential
+bldgs new component fuel shifting X other component X commercial
+bldgs retrofitting X urban residential
+bldgs retrofitting X rural residential
+bldgs retrofitting X commercial
+bldgs distributed solar subsidy X
+bldgs min fraction distributed solar X
+indst methane capture X agriculture and forestry 01T03
+indst methane capture X coal mining 05
+indst methane capture X oil and gas extraction 06
+indst methane capture X other mining and quarrying 07T08
+indst methane capture X food beverage and tobacco 10T12
+indst methane capture X textiles apparel and leather 13T15
+indst methane capture X wood products 16
+indst methane capture X pulp paper and printing 17T18
+indst methane capture X refined petroleum and coke 19
+indst methane capture X chemicals 20
+indst methane capture X rubber and plastic products 22
+indst methane capture X glass and glass products 231
+indst methane capture X cement and other nonmetallic minerals 239
+indst methane capture X iron and steel 241
+indst methane capture X other metals 242
+indst methane capture X metal products except machinery and vehicles 25
+indst methane capture X computers and electronics 26
+indst methane capture X appliances and electrical equipment 27
+indst methane capture X other machinery 28
+indst methane capture X road vehicles 29
+indst methane capture X nonroad vehicles 30
+indst methane capture X other manufacturing 31T33
+indst methane capture X energy pipelines and gas processing 352T353
+indst methane capture X water and waste 36T39
+indst methane capture X construction 41T43
+indst methane destruction X agriculture and forestry 01T03
+indst methane destruction X coal mining 05
+indst methane destruction X oil and gas extraction 06
+indst methane destruction X other mining and quarrying 07T08
+indst methane destruction X food beverage and tobacco 10T12
+indst methane destruction X textiles apparel and leather 13T15
+indst methane destruction X wood products 16
+indst methane destruction X pulp paper and printing 17T18
+indst methane destruction X refined petroleum and coke 19
+indst methane destruction X chemicals 20
+indst methane destruction X rubber and plastic products 22
+indst methane destruction X glass and glass products 231
+indst methane destruction X cement and other nonmetallic minerals 239
+indst methane destruction X iron and steel 241
+indst methane destruction X other metals 242
+indst methane destruction X metal products except machinery and vehicles 25
+indst methane destruction X computers and electronics 26
+indst methane destruction X appliances and electrical equipment 27
+indst methane destruction X other machinery 28
+indst methane destruction X road vehicles 29
+indst methane destruction X nonroad vehicles 30
+indst methane destruction X other manufacturing 31T33
+indst methane destruction X energy pipelines and gas processing 352T353
+indst methane destruction X water and waste 36T39
+indst methane destruction X construction 41T43
+indst f gas substitution X
+indst f gas destruction X
+indst f gas recovery X
+indst f gas inspct maint retrofit X
+indst cropland and rice measures X
+indst livestock measures X
+indst cement measures X
+indst early retirement X
+indst system integration X
+indst CHP X
+indst efficiency standards X agriculture and forestry 01T03 X electricity if
+indst efficiency standards X agriculture and forestry 01T03 X hard coal if
+indst efficiency standards X agriculture and forestry 01T03 X natural gas if
+indst efficiency standards X agriculture and forestry 01T03 X biomass if
+indst efficiency standards X agriculture and forestry 01T03 X petroleum diesel if
+indst efficiency standards X agriculture and forestry 01T03 X heat if
+indst efficiency standards X agriculture and forestry 01T03 X crude oil if
+indst efficiency standards X agriculture and forestry 01T03 X heavy or residual fuel oil if
+indst efficiency standards X agriculture and forestry 01T03 X LPG propane or butane if
+indst efficiency standards X agriculture and forestry 01T03 X hydrogen if
+indst efficiency standards X coal mining 05 X electricity if
+indst efficiency standards X coal mining 05 X hard coal if
+indst efficiency standards X coal mining 05 X natural gas if
+indst efficiency standards X coal mining 05 X biomass if
+indst efficiency standards X coal mining 05 X petroleum diesel if
+indst efficiency standards X coal mining 05 X heat if
+indst efficiency standards X coal mining 05 X crude oil if
+indst efficiency standards X coal mining 05 X heavy or residual fuel oil if
+indst efficiency standards X coal mining 05 X LPG propane or butane if
+indst efficiency standards X coal mining 05 X hydrogen if
+indst efficiency standards X oil and gas extraction 06 X electricity if
+indst efficiency standards X oil and gas extraction 06 X hard coal if
+indst efficiency standards X oil and gas extraction 06 X natural gas if
+indst efficiency standards X oil and gas extraction 06 X biomass if
+indst efficiency standards X oil and gas extraction 06 X petroleum diesel if
+indst efficiency standards X oil and gas extraction 06 X heat if
+indst efficiency standards X oil and gas extraction 06 X crude oil if
+indst efficiency standards X oil and gas extraction 06 X heavy or residual fuel oil if
+indst efficiency standards X oil and gas extraction 06 X LPG propane or butane if
+indst efficiency standards X oil and gas extraction 06 X hydrogen if
+indst efficiency standards X other mining and quarrying 07T08 X electricity if
+indst efficiency standards X other mining and quarrying 07T08 X hard coal if
+indst efficiency standards X other mining and quarrying 07T08 X natural gas if
+indst efficiency standards X other mining and quarrying 07T08 X biomass if
+indst efficiency standards X other mining and quarrying 07T08 X petroleum diesel if
+indst efficiency standards X other mining and quarrying 07T08 X heat if
+indst efficiency standards X other mining and quarrying 07T08 X crude oil if
+indst efficiency standards X other mining and quarrying 07T08 X heavy or residual fuel oil if
+indst efficiency standards X other mining and quarrying 07T08 X LPG propane or butane if
+indst efficiency standards X other mining and quarrying 07T08 X hydrogen if
+indst efficiency standards X food beverage and tobacco 10T12 X electricity if
+indst efficiency standards X food beverage and tobacco 10T12 X hard coal if
+indst efficiency standards X food beverage and tobacco 10T12 X natural gas if
+indst efficiency standards X food beverage and tobacco 10T12 X biomass if
+indst efficiency standards X food beverage and tobacco 10T12 X petroleum diesel if
+indst efficiency standards X food beverage and tobacco 10T12 X heat if
+indst efficiency standards X food beverage and tobacco 10T12 X crude oil if
+indst efficiency standards X food beverage and tobacco 10T12 X heavy or residual fuel oil if
+indst efficiency standards X food beverage and tobacco 10T12 X LPG propane or butane if
+indst efficiency standards X food beverage and tobacco 10T12 X hydrogen if
+indst efficiency standards X textiles apparel and leather 13T15 X electricity if
+indst efficiency standards X textiles apparel and leather 13T15 X hard coal if
+indst efficiency standards X textiles apparel and leather 13T15 X natural gas if
+indst efficiency standards X textiles apparel and leather 13T15 X biomass if
+indst efficiency standards X textiles apparel and leather 13T15 X petroleum diesel if
+indst efficiency standards X textiles apparel and leather 13T15 X heat if
+indst efficiency standards X textiles apparel and leather 13T15 X crude oil if
+indst efficiency standards X textiles apparel and leather 13T15 X heavy or residual fuel oil if
+indst efficiency standards X textiles apparel and leather 13T15 X LPG propane or butane if
+indst efficiency standards X textiles apparel and leather 13T15 X hydrogen if
+indst efficiency standards X wood products 16 X electricity if
+indst efficiency standards X wood products 16 X hard coal if
+indst efficiency standards X wood products 16 X natural gas if
+indst efficiency standards X wood products 16 X biomass if
+indst efficiency standards X wood products 16 X petroleum diesel if
+indst efficiency standards X wood products 16 X heat if
+indst efficiency standards X wood products 16 X crude oil if
+indst efficiency standards X wood products 16 X heavy or residual fuel oil if
+indst efficiency standards X wood products 16 X LPG propane or butane if
+indst efficiency standards X wood products 16 X hydrogen if
+indst efficiency standards X pulp paper and printing 17T18 X electricity if
+indst efficiency standards X pulp paper and printing 17T18 X hard coal if
+indst efficiency standards X pulp paper and printing 17T18 X natural gas if
+indst efficiency standards X pulp paper and printing 17T18 X biomass if
+indst efficiency standards X pulp paper and printing 17T18 X petroleum diesel if
+indst efficiency standards X pulp paper and printing 17T18 X heat if
+indst efficiency standards X pulp paper and printing 17T18 X crude oil if
+indst efficiency standards X pulp paper and printing 17T18 X heavy or residual fuel oil if
+indst efficiency standards X pulp paper and printing 17T18 X LPG propane or butane if
+indst efficiency standards X pulp paper and printing 17T18 X hydrogen if
+indst efficiency standards X refined petroleum and coke 19 X electricity if
+indst efficiency standards X refined petroleum and coke 19 X hard coal if
+indst efficiency standards X refined petroleum and coke 19 X natural gas if
+indst efficiency standards X refined petroleum and coke 19 X biomass if
+indst efficiency standards X refined petroleum and coke 19 X petroleum diesel if
+indst efficiency standards X refined petroleum and coke 19 X heat if
+indst efficiency standards X refined petroleum and coke 19 X crude oil if
+indst efficiency standards X refined petroleum and coke 19 X heavy or residual fuel oil if
+indst efficiency standards X refined petroleum and coke 19 X LPG propane or butane if
+indst efficiency standards X refined petroleum and coke 19 X hydrogen if
+indst efficiency standards X chemicals 20 X electricity if
+indst efficiency standards X chemicals 20 X hard coal if
+indst efficiency standards X chemicals 20 X natural gas if
+indst efficiency standards X chemicals 20 X biomass if
+indst efficiency standards X chemicals 20 X petroleum diesel if
+indst efficiency standards X chemicals 20 X heat if
+indst efficiency standards X chemicals 20 X crude oil if
+indst efficiency standards X chemicals 20 X heavy or residual fuel oil if
+indst efficiency standards X chemicals 20 X LPG propane or butane if
+indst efficiency standards X chemicals 20 X hydrogen if
+indst efficiency standards X rubber and plastic products 22 X electricity if
+indst efficiency standards X rubber and plastic products 22 X hard coal if
+indst efficiency standards X rubber and plastic products 22 X natural gas if
+indst efficiency standards X rubber and plastic products 22 X biomass if
+indst efficiency standards X rubber and plastic products 22 X petroleum diesel if
+indst efficiency standards X rubber and plastic products 22 X heat if
+indst efficiency standards X rubber and plastic products 22 X crude oil if
+indst efficiency standards X rubber and plastic products 22 X heavy or residual fuel oil if
+indst efficiency standards X rubber and plastic products 22 X LPG propane or butane if
+indst efficiency standards X rubber and plastic products 22 X hydrogen if
+indst efficiency standards X glass and glass products 231 X electricity if
+indst efficiency standards X glass and glass products 231 X hard coal if
+indst efficiency standards X glass and glass products 231 X natural gas if
+indst efficiency standards X glass and glass products 231 X biomass if
+indst efficiency standards X glass and glass products 231 X petroleum diesel if
+indst efficiency standards X glass and glass products 231 X heat if
+indst efficiency standards X glass and glass products 231 X crude oil if
+indst efficiency standards X glass and glass products 231 X heavy or residual fuel oil if
+indst efficiency standards X glass and glass products 231 X LPG propane or butane if
+indst efficiency standards X glass and glass products 231 X hydrogen if
+indst efficiency standards X cement and other nonmetallic minerals 239 X electricity if
+indst efficiency standards X cement and other nonmetallic minerals 239 X hard coal if
+indst efficiency standards X cement and other nonmetallic minerals 239 X natural gas if
+indst efficiency standards X cement and other nonmetallic minerals 239 X biomass if
+indst efficiency standards X cement and other nonmetallic minerals 239 X petroleum diesel if
+indst efficiency standards X cement and other nonmetallic minerals 239 X heat if
+indst efficiency standards X cement and other nonmetallic minerals 239 X crude oil if
+indst efficiency standards X cement and other nonmetallic minerals 239 X heavy or residual fuel oil if
+indst efficiency standards X cement and other nonmetallic minerals 239 X LPG propane or butane if
+indst efficiency standards X cement and other nonmetallic minerals 239 X hydrogen if
+indst efficiency standards X iron and steel 241 X electricity if
+indst efficiency standards X iron and steel 241 X hard coal if
+indst efficiency standards X iron and steel 241 X natural gas if
+indst efficiency standards X iron and steel 241 X biomass if
+indst efficiency standards X iron and steel 241 X petroleum diesel if
+indst efficiency standards X iron and steel 241 X heat if
+indst efficiency standards X iron and steel 241 X crude oil if
+indst efficiency standards X iron and steel 241 X heavy or residual fuel oil if
+indst efficiency standards X iron and steel 241 X LPG propane or butane if
+indst efficiency standards X iron and steel 241 X hydrogen if
+indst efficiency standards X other metals 242 X electricity if
+indst efficiency standards X other metals 242 X hard coal if
+indst efficiency standards X other metals 242 X natural gas if
+indst efficiency standards X other metals 242 X biomass if
+indst efficiency standards X other metals 242 X petroleum diesel if
+indst efficiency standards X other metals 242 X heat if
+indst efficiency standards X other metals 242 X crude oil if
+indst efficiency standards X other metals 242 X heavy or residual fuel oil if
+indst efficiency standards X other metals 242 X LPG propane or butane if
+indst efficiency standards X other metals 242 X hydrogen if
+indst efficiency standards X metal products except machinery and vehicles 25 X electricity if
+indst efficiency standards X metal products except machinery and vehicles 25 X hard coal if
+indst efficiency standards X metal products except machinery and vehicles 25 X natural gas if
+indst efficiency standards X metal products except machinery and vehicles 25 X biomass if
+indst efficiency standards X metal products except machinery and vehicles 25 X petroleum diesel if
+indst efficiency standards X metal products except machinery and vehicles 25 X heat if
+indst efficiency standards X metal products except machinery and vehicles 25 X crude oil if
+indst efficiency standards X metal products except machinery and vehicles 25 X heavy or residual fuel oil if
+indst efficiency standards X metal products except machinery and vehicles 25 X LPG propane or butane if
+indst efficiency standards X metal products except machinery and vehicles 25 X hydrogen if
+indst efficiency standards X computers and electronics 26 X electricity if
+indst efficiency standards X computers and electronics 26 X hard coal if
+indst efficiency standards X computers and electronics 26 X natural gas if
+indst efficiency standards X computers and electronics 26 X biomass if
+indst efficiency standards X computers and electronics 26 X petroleum diesel if
+indst efficiency standards X computers and electronics 26 X heat if
+indst efficiency standards X computers and electronics 26 X crude oil if
+indst efficiency standards X computers and electronics 26 X heavy or residual fuel oil if
+indst efficiency standards X computers and electronics 26 X LPG propane or butane if
+indst efficiency standards X computers and electronics 26 X hydrogen if
+indst efficiency standards X appliances and electrical equipment 27 X electricity if
+indst efficiency standards X appliances and electrical equipment 27 X hard coal if
+indst efficiency standards X appliances and electrical equipment 27 X natural gas if
+indst efficiency standards X appliances and electrical equipment 27 X biomass if
+indst efficiency standards X appliances and electrical equipment 27 X petroleum diesel if
+indst efficiency standards X appliances and electrical equipment 27 X heat if
+indst efficiency standards X appliances and electrical equipment 27 X crude oil if
+indst efficiency standards X appliances and electrical equipment 27 X heavy or residual fuel oil if
+indst efficiency standards X appliances and electrical equipment 27 X LPG propane or butane if
+indst efficiency standards X appliances and electrical equipment 27 X hydrogen if
+indst efficiency standards X other machinery 28 X electricity if
+indst efficiency standards X other machinery 28 X hard coal if
+indst efficiency standards X other machinery 28 X natural gas if
+indst efficiency standards X other machinery 28 X biomass if
+indst efficiency standards X other machinery 28 X petroleum diesel if
+indst efficiency standards X other machinery 28 X heat if
+indst efficiency standards X other machinery 28 X crude oil if
+indst efficiency standards X other machinery 28 X heavy or residual fuel oil if
+indst efficiency standards X other machinery 28 X LPG propane or butane if
+indst efficiency standards X other machinery 28 X hydrogen if
+indst efficiency standards X road vehicles 29 X electricity if
+indst efficiency standards X road vehicles 29 X hard coal if
+indst efficiency standards X road vehicles 29 X natural gas if
+indst efficiency standards X road vehicles 29 X biomass if
+indst efficiency standards X road vehicles 29 X petroleum diesel if
+indst efficiency standards X road vehicles 29 X heat if
+indst efficiency standards X road vehicles 29 X crude oil if
+indst efficiency standards X road vehicles 29 X heavy or residual fuel oil if
+indst efficiency standards X road vehicles 29 X LPG propane or butane if
+indst efficiency standards X road vehicles 29 X hydrogen if
+indst efficiency standards X nonroad vehicles 30 X electricity if
+indst efficiency standards X nonroad vehicles 30 X hard coal if
+indst efficiency standards X nonroad vehicles 30 X natural gas if
+indst efficiency standards X nonroad vehicles 30 X biomass if
+indst efficiency standards X nonroad vehicles 30 X petroleum diesel if
+indst efficiency standards X nonroad vehicles 30 X heat if
+indst efficiency standards X nonroad vehicles 30 X crude oil if
+indst efficiency standards X nonroad vehicles 30 X heavy or residual fuel oil if
+indst efficiency standards X nonroad vehicles 30 X LPG propane or butane if
+indst efficiency standards X nonroad vehicles 30 X hydrogen if
+indst efficiency standards X other manufacturing 31T33 X electricity if
+indst efficiency standards X other manufacturing 31T33 X hard coal if
+indst efficiency standards X other manufacturing 31T33 X natural gas if
+indst efficiency standards X other manufacturing 31T33 X biomass if
+indst efficiency standards X other manufacturing 31T33 X petroleum diesel if
+indst efficiency standards X other manufacturing 31T33 X heat if
+indst efficiency standards X other manufacturing 31T33 X crude oil if
+indst efficiency standards X other manufacturing 31T33 X heavy or residual fuel oil if
+indst efficiency standards X other manufacturing 31T33 X LPG propane or butane if
+indst efficiency standards X other manufacturing 31T33 X hydrogen if
+indst efficiency standards X energy pipelines and gas processing 352T353 X electricity if
+indst efficiency standards X energy pipelines and gas processing 352T353 X hard coal if
+indst efficiency standards X energy pipelines and gas processing 352T353 X natural gas if
+indst efficiency standards X energy pipelines and gas processing 352T353 X biomass if
+indst efficiency standards X energy pipelines and gas processing 352T353 X petroleum diesel if
+indst efficiency standards X energy pipelines and gas processing 352T353 X heat if
+indst efficiency standards X energy pipelines and gas processing 352T353 X crude oil if
+indst efficiency standards X energy pipelines and gas processing 352T353 X heavy or residual fuel oil if
+indst efficiency standards X energy pipelines and gas processing 352T353 X LPG propane or butane if
+indst efficiency standards X energy pipelines and gas processing 352T353 X hydrogen if
+indst efficiency standards X water and waste 36T39 X electricity if
+indst efficiency standards X water and waste 36T39 X hard coal if
+indst efficiency standards X water and waste 36T39 X natural gas if
+indst efficiency standards X water and waste 36T39 X biomass if
+indst efficiency standards X water and waste 36T39 X petroleum diesel if
+indst efficiency standards X water and waste 36T39 X heat if
+indst efficiency standards X water and waste 36T39 X crude oil if
+indst efficiency standards X water and waste 36T39 X heavy or residual fuel oil if
+indst efficiency standards X water and waste 36T39 X LPG propane or butane if
+indst efficiency standards X water and waste 36T39 X hydrogen if
+indst efficiency standards X construction 41T43 X electricity if
+indst efficiency standards X construction 41T43 X hard coal if
+indst efficiency standards X construction 41T43 X natural gas if
+indst efficiency standards X construction 41T43 X biomass if
+indst efficiency standards X construction 41T43 X petroleum diesel if
+indst efficiency standards X construction 41T43 X heat if
+indst efficiency standards X construction 41T43 X crude oil if
+indst efficiency standards X construction 41T43 X heavy or residual fuel oil if
+indst efficiency standards X construction 41T43 X LPG propane or butane if
+indst efficiency standards X construction 41T43 X hydrogen if
+indst fuel type shifting X agriculture and forestry 01T03 X electricity if
+indst fuel type shifting X agriculture and forestry 01T03 X hard coal if
+indst fuel type shifting X agriculture and forestry 01T03 X natural gas if
+indst fuel type shifting X agriculture and forestry 01T03 X biomass if
+indst fuel type shifting X agriculture and forestry 01T03 X petroleum diesel if
+indst fuel type shifting X agriculture and forestry 01T03 X heat if
+indst fuel type shifting X agriculture and forestry 01T03 X crude oil if
+indst fuel type shifting X agriculture and forestry 01T03 X heavy or residual fuel oil if
+indst fuel type shifting X agriculture and forestry 01T03 X LPG propane or butane if
+indst fuel type shifting X agriculture and forestry 01T03 X hydrogen if
+indst fuel type shifting X coal mining 05 X electricity if
+indst fuel type shifting X coal mining 05 X hard coal if
+indst fuel type shifting X coal mining 05 X natural gas if
+indst fuel type shifting X coal mining 05 X biomass if
+indst fuel type shifting X coal mining 05 X petroleum diesel if
+indst fuel type shifting X coal mining 05 X heat if
+indst fuel type shifting X coal mining 05 X crude oil if
+indst fuel type shifting X coal mining 05 X heavy or residual fuel oil if
+indst fuel type shifting X coal mining 05 X LPG propane or butane if
+indst fuel type shifting X coal mining 05 X hydrogen if
+indst fuel type shifting X oil and gas extraction 06 X electricity if
+indst fuel type shifting X oil and gas extraction 06 X hard coal if
+indst fuel type shifting X oil and gas extraction 06 X natural gas if
+indst fuel type shifting X oil and gas extraction 06 X biomass if
+indst fuel type shifting X oil and gas extraction 06 X petroleum diesel if
+indst fuel type shifting X oil and gas extraction 06 X heat if
+indst fuel type shifting X oil and gas extraction 06 X crude oil if
+indst fuel type shifting X oil and gas extraction 06 X heavy or residual fuel oil if
+indst fuel type shifting X oil and gas extraction 06 X LPG propane or butane if
+indst fuel type shifting X oil and gas extraction 06 X hydrogen if
+indst fuel type shifting X other mining and quarrying 07T08 X electricity if
+indst fuel type shifting X other mining and quarrying 07T08 X hard coal if
+indst fuel type shifting X other mining and quarrying 07T08 X natural gas if
+indst fuel type shifting X other mining and quarrying 07T08 X biomass if
+indst fuel type shifting X other mining and quarrying 07T08 X petroleum diesel if
+indst fuel type shifting X other mining and quarrying 07T08 X heat if
+indst fuel type shifting X other mining and quarrying 07T08 X crude oil if
+indst fuel type shifting X other mining and quarrying 07T08 X heavy or residual fuel oil if
+indst fuel type shifting X other mining and quarrying 07T08 X LPG propane or butane if
+indst fuel type shifting X other mining and quarrying 07T08 X hydrogen if
+indst fuel type shifting X food beverage and tobacco 10T12 X electricity if
+indst fuel type shifting X food beverage and tobacco 10T12 X hard coal if
+indst fuel type shifting X food beverage and tobacco 10T12 X natural gas if
+indst fuel type shifting X food beverage and tobacco 10T12 X biomass if
+indst fuel type shifting X food beverage and tobacco 10T12 X petroleum diesel if
+indst fuel type shifting X food beverage and tobacco 10T12 X heat if
+indst fuel type shifting X food beverage and tobacco 10T12 X crude oil if
+indst fuel type shifting X food beverage and tobacco 10T12 X heavy or residual fuel oil if
+indst fuel type shifting X food beverage and tobacco 10T12 X LPG propane or butane if
+indst fuel type shifting X food beverage and tobacco 10T12 X hydrogen if
+indst fuel type shifting X textiles apparel and leather 13T15 X electricity if
+indst fuel type shifting X textiles apparel and leather 13T15 X hard coal if
+indst fuel type shifting X textiles apparel and leather 13T15 X natural gas if
+indst fuel type shifting X textiles apparel and leather 13T15 X biomass if
+indst fuel type shifting X textiles apparel and leather 13T15 X petroleum diesel if
+indst fuel type shifting X textiles apparel and leather 13T15 X heat if
+indst fuel type shifting X textiles apparel and leather 13T15 X crude oil if
+indst fuel type shifting X textiles apparel and leather 13T15 X heavy or residual fuel oil if
+indst fuel type shifting X textiles apparel and leather 13T15 X LPG propane or butane if
+indst fuel type shifting X textiles apparel and leather 13T15 X hydrogen if
+indst fuel type shifting X wood products 16 X electricity if
+indst fuel type shifting X wood products 16 X hard coal if
+indst fuel type shifting X wood products 16 X natural gas if
+indst fuel type shifting X wood products 16 X biomass if
+indst fuel type shifting X wood products 16 X petroleum diesel if
+indst fuel type shifting X wood products 16 X heat if
+indst fuel type shifting X wood products 16 X crude oil if
+indst fuel type shifting X wood products 16 X heavy or residual fuel oil if
+indst fuel type shifting X wood products 16 X LPG propane or butane if
+indst fuel type shifting X wood products 16 X hydrogen if
+indst fuel type shifting X pulp paper and printing 17T18 X electricity if
+indst fuel type shifting X pulp paper and printing 17T18 X hard coal if
+indst fuel type shifting X pulp paper and printing 17T18 X natural gas if
+indst fuel type shifting X pulp paper and printing 17T18 X biomass if
+indst fuel type shifting X pulp paper and printing 17T18 X petroleum diesel if
+indst fuel type shifting X pulp paper and printing 17T18 X heat if
+indst fuel type shifting X pulp paper and printing 17T18 X crude oil if
+indst fuel type shifting X pulp paper and printing 17T18 X heavy or residual fuel oil if
+indst fuel type shifting X pulp paper and printing 17T18 X LPG propane or butane if
+indst fuel type shifting X pulp paper and printing 17T18 X hydrogen if
+indst fuel type shifting X refined petroleum and coke 19 X electricity if
+indst fuel type shifting X refined petroleum and coke 19 X hard coal if
+indst fuel type shifting X refined petroleum and coke 19 X natural gas if
+indst fuel type shifting X refined petroleum and coke 19 X biomass if
+indst fuel type shifting X refined petroleum and coke 19 X petroleum diesel if
+indst fuel type shifting X refined petroleum and coke 19 X heat if
+indst fuel type shifting X refined petroleum and coke 19 X crude oil if
+indst fuel type shifting X refined petroleum and coke 19 X heavy or residual fuel oil if
+indst fuel type shifting X refined petroleum and coke 19 X LPG propane or butane if
+indst fuel type shifting X refined petroleum and coke 19 X hydrogen if
+indst fuel type shifting X chemicals 20 X electricity if
+indst fuel type shifting X chemicals 20 X hard coal if
+indst fuel type shifting X chemicals 20 X natural gas if
+indst fuel type shifting X chemicals 20 X biomass if
+indst fuel type shifting X chemicals 20 X petroleum diesel if
+indst fuel type shifting X chemicals 20 X heat if
+indst fuel type shifting X chemicals 20 X crude oil if
+indst fuel type shifting X chemicals 20 X heavy or residual fuel oil if
+indst fuel type shifting X chemicals 20 X LPG propane or butane if
+indst fuel type shifting X chemicals 20 X hydrogen if
+indst fuel type shifting X rubber and plastic products 22 X electricity if
+indst fuel type shifting X rubber and plastic products 22 X hard coal if
+indst fuel type shifting X rubber and plastic products 22 X natural gas if
+indst fuel type shifting X rubber and plastic products 22 X biomass if
+indst fuel type shifting X rubber and plastic products 22 X petroleum diesel if
+indst fuel type shifting X rubber and plastic products 22 X heat if
+indst fuel type shifting X rubber and plastic products 22 X crude oil if
+indst fuel type shifting X rubber and plastic products 22 X heavy or residual fuel oil if
+indst fuel type shifting X rubber and plastic products 22 X LPG propane or butane if
+indst fuel type shifting X rubber and plastic products 22 X hydrogen if
+indst fuel type shifting X glass and glass products 231 X electricity if
+indst fuel type shifting X glass and glass products 231 X hard coal if
+indst fuel type shifting X glass and glass products 231 X natural gas if
+indst fuel type shifting X glass and glass products 231 X biomass if
+indst fuel type shifting X glass and glass products 231 X petroleum diesel if
+indst fuel type shifting X glass and glass products 231 X heat if
+indst fuel type shifting X glass and glass products 231 X crude oil if
+indst fuel type shifting X glass and glass products 231 X heavy or residual fuel oil if
+indst fuel type shifting X glass and glass products 231 X LPG propane or butane if
+indst fuel type shifting X glass and glass products 231 X hydrogen if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X electricity if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X hard coal if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X natural gas if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X biomass if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X petroleum diesel if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X heat if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X crude oil if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X heavy or residual fuel oil if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X LPG propane or butane if
+indst fuel type shifting X cement and other nonmetallic minerals 239 X hydrogen if
+indst fuel type shifting X iron and steel 241 X electricity if
+indst fuel type shifting X iron and steel 241 X hard coal if
+indst fuel type shifting X iron and steel 241 X natural gas if
+indst fuel type shifting X iron and steel 241 X biomass if
+indst fuel type shifting X iron and steel 241 X petroleum diesel if
+indst fuel type shifting X iron and steel 241 X heat if
+indst fuel type shifting X iron and steel 241 X crude oil if
+indst fuel type shifting X iron and steel 241 X heavy or residual fuel oil if
+indst fuel type shifting X iron and steel 241 X LPG propane or butane if
+indst fuel type shifting X iron and steel 241 X hydrogen if
+indst fuel type shifting X other metals 242 X electricity if
+indst fuel type shifting X other metals 242 X hard coal if
+indst fuel type shifting X other metals 242 X natural gas if
+indst fuel type shifting X other metals 242 X biomass if
+indst fuel type shifting X other metals 242 X petroleum diesel if
+indst fuel type shifting X other metals 242 X heat if
+indst fuel type shifting X other metals 242 X crude oil if
+indst fuel type shifting X other metals 242 X heavy or residual fuel oil if
+indst fuel type shifting X other metals 242 X LPG propane or butane if
+indst fuel type shifting X other metals 242 X hydrogen if
+indst fuel type shifting X metal products except machinery and vehicles 25 X electricity if
+indst fuel type shifting X metal products except machinery and vehicles 25 X hard coal if
+indst fuel type shifting X metal products except machinery and vehicles 25 X natural gas if
+indst fuel type shifting X metal products except machinery and vehicles 25 X biomass if
+indst fuel type shifting X metal products except machinery and vehicles 25 X petroleum diesel if
+indst fuel type shifting X metal products except machinery and vehicles 25 X heat if
+indst fuel type shifting X metal products except machinery and vehicles 25 X crude oil if
+indst fuel type shifting X metal products except machinery and vehicles 25 X heavy or residual fuel oil if
+indst fuel type shifting X metal products except machinery and vehicles 25 X LPG propane or butane if
+indst fuel type shifting X metal products except machinery and vehicles 25 X hydrogen if
+indst fuel type shifting X computers and electronics 26 X electricity if
+indst fuel type shifting X computers and electronics 26 X hard coal if
+indst fuel type shifting X computers and electronics 26 X natural gas if
+indst fuel type shifting X computers and electronics 26 X biomass if
+indst fuel type shifting X computers and electronics 26 X petroleum diesel if
+indst fuel type shifting X computers and electronics 26 X heat if
+indst fuel type shifting X computers and electronics 26 X crude oil if
+indst fuel type shifting X computers and electronics 26 X heavy or residual fuel oil if
+indst fuel type shifting X computers and electronics 26 X LPG propane or butane if
+indst fuel type shifting X computers and electronics 26 X hydrogen if
+indst fuel type shifting X appliances and electrical equipment 27 X electricity if
+indst fuel type shifting X appliances and electrical equipment 27 X hard coal if
+indst fuel type shifting X appliances and electrical equipment 27 X natural gas if
+indst fuel type shifting X appliances and electrical equipment 27 X biomass if
+indst fuel type shifting X appliances and electrical equipment 27 X petroleum diesel if
+indst fuel type shifting X appliances and electrical equipment 27 X heat if
+indst fuel type shifting X appliances and electrical equipment 27 X crude oil if
+indst fuel type shifting X appliances and electrical equipment 27 X heavy or residual fuel oil if
+indst fuel type shifting X appliances and electrical equipment 27 X LPG propane or butane if
+indst fuel type shifting X appliances and electrical equipment 27 X hydrogen if
+indst fuel type shifting X other machinery 28 X electricity if
+indst fuel type shifting X other machinery 28 X hard coal if
+indst fuel type shifting X other machinery 28 X natural gas if
+indst fuel type shifting X other machinery 28 X biomass if
+indst fuel type shifting X other machinery 28 X petroleum diesel if
+indst fuel type shifting X other machinery 28 X heat if
+indst fuel type shifting X other machinery 28 X crude oil if
+indst fuel type shifting X other machinery 28 X heavy or residual fuel oil if
+indst fuel type shifting X other machinery 28 X LPG propane or butane if
+indst fuel type shifting X other machinery 28 X hydrogen if
+indst fuel type shifting X road vehicles 29 X electricity if
+indst fuel type shifting X road vehicles 29 X hard coal if
+indst fuel type shifting X road vehicles 29 X natural gas if
+indst fuel type shifting X road vehicles 29 X biomass if
+indst fuel type shifting X road vehicles 29 X petroleum diesel if
+indst fuel type shifting X road vehicles 29 X heat if
+indst fuel type shifting X road vehicles 29 X crude oil if
+indst fuel type shifting X road vehicles 29 X heavy or residual fuel oil if
+indst fuel type shifting X road vehicles 29 X LPG propane or butane if
+indst fuel type shifting X road vehicles 29 X hydrogen if
+indst fuel type shifting X nonroad vehicles 30 X electricity if
+indst fuel type shifting X nonroad vehicles 30 X hard coal if
+indst fuel type shifting X nonroad vehicles 30 X natural gas if
+indst fuel type shifting X nonroad vehicles 30 X biomass if
+indst fuel type shifting X nonroad vehicles 30 X petroleum diesel if
+indst fuel type shifting X nonroad vehicles 30 X heat if
+indst fuel type shifting X nonroad vehicles 30 X crude oil if
+indst fuel type shifting X nonroad vehicles 30 X heavy or residual fuel oil if
+indst fuel type shifting X nonroad vehicles 30 X LPG propane or butane if
+indst fuel type shifting X nonroad vehicles 30 X hydrogen if
+indst fuel type shifting X other manufacturing 31T33 X electricity if
+indst fuel type shifting X other manufacturing 31T33 X hard coal if
+indst fuel type shifting X other manufacturing 31T33 X natural gas if
+indst fuel type shifting X other manufacturing 31T33 X biomass if
+indst fuel type shifting X other manufacturing 31T33 X petroleum diesel if
+indst fuel type shifting X other manufacturing 31T33 X heat if
+indst fuel type shifting X other manufacturing 31T33 X crude oil if
+indst fuel type shifting X other manufacturing 31T33 X heavy or residual fuel oil if
+indst fuel type shifting X other manufacturing 31T33 X LPG propane or butane if
+indst fuel type shifting X other manufacturing 31T33 X hydrogen if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X electricity if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X hard coal if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X natural gas if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X biomass if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X petroleum diesel if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X heat if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X crude oil if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X heavy or residual fuel oil if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X LPG propane or butane if
+indst fuel type shifting X energy pipelines and gas processing 352T353 X hydrogen if
+indst fuel type shifting X water and waste 36T39 X electricity if
+indst fuel type shifting X water and waste 36T39 X hard coal if
+indst fuel type shifting X water and waste 36T39 X natural gas if
+indst fuel type shifting X water and waste 36T39 X biomass if
+indst fuel type shifting X water and waste 36T39 X petroleum diesel if
+indst fuel type shifting X water and waste 36T39 X heat if
+indst fuel type shifting X water and waste 36T39 X crude oil if
+indst fuel type shifting X water and waste 36T39 X heavy or residual fuel oil if
+indst fuel type shifting X water and waste 36T39 X LPG propane or butane if
+indst fuel type shifting X water and waste 36T39 X hydrogen if
+indst fuel type shifting X construction 41T43 X electricity if
+indst fuel type shifting X construction 41T43 X hard coal if
+indst fuel type shifting X construction 41T43 X natural gas if
+indst fuel type shifting X construction 41T43 X biomass if
+indst fuel type shifting X construction 41T43 X petroleum diesel if
+indst fuel type shifting X construction 41T43 X heat if
+indst fuel type shifting X construction 41T43 X crude oil if
+indst fuel type shifting X construction 41T43 X heavy or residual fuel oil if
+indst fuel type shifting X construction 41T43 X LPG propane or butane if
+indst fuel type shifting X construction 41T43 X hydrogen if
+indst reduce nonenergy product demand X agriculture and forestry 01T03
+indst reduce nonenergy product demand X coal mining 05
+indst reduce nonenergy product demand X oil and gas extraction 06
+indst reduce nonenergy product demand X other mining and quarrying 07T08
+indst reduce nonenergy product demand X food beverage and tobacco 10T12
+indst reduce nonenergy product demand X textiles apparel and leather 13T15
+indst reduce nonenergy product demand X wood products 16
+indst reduce nonenergy product demand X pulp paper and printing 17T18
+indst reduce nonenergy product demand X refined petroleum and coke 19
+indst reduce nonenergy product demand X chemicals 20
+indst reduce nonenergy product demand X rubber and plastic products 22
+indst reduce nonenergy product demand X glass and glass products 231
+indst reduce nonenergy product demand X cement and other nonmetallic minerals 239
+indst reduce nonenergy product demand X iron and steel 241
+indst reduce nonenergy product demand X other metals 242
+indst reduce nonenergy product demand X metal products except machinery and vehicles 25
+indst reduce nonenergy product demand X computers and electronics 26
+indst reduce nonenergy product demand X appliances and electrical equipment 27
+indst reduce nonenergy product demand X other machinery 28
+indst reduce nonenergy product demand X road vehicles 29
+indst reduce nonenergy product demand X nonroad vehicles 30
+indst reduce nonenergy product demand X other manufacturing 31T33
+indst reduce nonenergy product demand X energy pipelines and gas processing 352T353
+indst reduce nonenergy product demand X water and waste 36T39
+indst reduce nonenergy product demand X construction 41T43
+indst shift to nonanimal products X
+indst reduce fossil fuel exports X electricity
+indst reduce fossil fuel exports X hard coal
+indst reduce fossil fuel exports X natural gas
+indst reduce fossil fuel exports X nuclear
+indst reduce fossil fuel exports X hydro
+indst reduce fossil fuel exports X wind
+indst reduce fossil fuel exports X solar
+indst reduce fossil fuel exports X biomass
+indst reduce fossil fuel exports X petroleum gasoline
+indst reduce fossil fuel exports X petroleum diesel
+indst reduce fossil fuel exports X biofuel gasoline
+indst reduce fossil fuel exports X biofuel diesel
+indst reduce fossil fuel exports X jet fuel or kerosene
+indst reduce fossil fuel exports X heat
+indst reduce fossil fuel exports X geothermal
+indst reduce fossil fuel exports X lignite
+indst reduce fossil fuel exports X crude oil
+indst reduce fossil fuel exports X heavy or residual fuel oil
+indst reduce fossil fuel exports X LPG propane or butane
+indst reduce fossil fuel exports X municipal solid waste
+indst reduce fossil fuel exports X hydrogen
+indst CCS X agriculture and forestry 01T03 X energy related emissions
+indst CCS X agriculture and forestry 01T03 X process emissions
+indst CCS X coal mining 05 X energy related emissions
+indst CCS X coal mining 05 X process emissions
+indst CCS X oil and gas extraction 06 X energy related emissions
+indst CCS X oil and gas extraction 06 X process emissions
+indst CCS X other mining and quarrying 07T08 X energy related emissions
+indst CCS X other mining and quarrying 07T08 X process emissions
+indst CCS X food beverage and tobacco 10T12 X energy related emissions
+indst CCS X food beverage and tobacco 10T12 X process emissions
+indst CCS X textiles apparel and leather 13T15 X energy related emissions
+indst CCS X textiles apparel and leather 13T15 X process emissions
+indst CCS X wood products 16 X energy related emissions
+indst CCS X wood products 16 X process emissions
+indst CCS X pulp paper and printing 17T18 X energy related emissions
+indst CCS X pulp paper and printing 17T18 X process emissions
+indst CCS X refined petroleum and coke 19 X energy related emissions
+indst CCS X refined petroleum and coke 19 X process emissions
+indst CCS X chemicals 20 X energy related emissions
+indst CCS X chemicals 20 X process emissions
+indst CCS X rubber and plastic products 22 X energy related emissions
+indst CCS X rubber and plastic products 22 X process emissions
+indst CCS X glass and glass products 231 X energy related emissions
+indst CCS X glass and glass products 231 X process emissions
+indst CCS X cement and other nonmetallic minerals 239 X energy related emissions
+indst CCS X cement and other nonmetallic minerals 239 X process emissions
+indst CCS X iron and steel 241 X energy related emissions
+indst CCS X iron and steel 241 X process emissions
+indst CCS X other metals 242 X energy related emissions
+indst CCS X other metals 242 X process emissions
+indst CCS X metal products except machinery and vehicles 25 X energy related emissions
+indst CCS X metal products except machinery and vehicles 25 X process emissions
+indst CCS X computers and electronics 26 X energy related emissions
+indst CCS X computers and electronics 26 X process emissions
+indst CCS X appliances and electrical equipment 27 X energy related emissions
+indst CCS X appliances and electrical equipment 27 X process emissions
+indst CCS X other machinery 28 X energy related emissions
+indst CCS X other machinery 28 X process emissions
+indst CCS X road vehicles 29 X energy related emissions
+indst CCS X road vehicles 29 X process emissions
+indst CCS X nonroad vehicles 30 X energy related emissions
+indst CCS X nonroad vehicles 30 X process emissions
+indst CCS X other manufacturing 31T33 X energy related emissions
+indst CCS X other manufacturing 31T33 X process emissions
+indst CCS X energy pipelines and gas processing 352T353 X energy related emissions
+indst CCS X energy pipelines and gas processing 352T353 X process emissions
+indst CCS X water and waste 36T39 X energy related emissions
+indst CCS X water and waste 36T39 X process emissions
+indst CCS X construction 41T43 X energy related emissions
+indst CCS X construction 41T43 X process emissions
+cross fuel tax X electricity
+cross fuel tax X hard coal
+cross fuel tax X natural gas
+cross fuel tax X nuclear
+cross fuel tax X hydro
+cross fuel tax X wind
+cross fuel tax X solar
+cross fuel tax X biomass
+cross fuel tax X petroleum gasoline
+cross fuel tax X petroleum diesel
+cross fuel tax X biofuel gasoline
+cross fuel tax X biofuel diesel
+cross fuel tax X jet fuel or kerosene
+cross fuel tax X heat
+cross fuel tax X geothermal
+cross fuel tax X lignite
+cross fuel tax X crude oil
+cross fuel tax X heavy or residual fuel oil
+cross fuel tax X LPG propane or butane
+cross fuel tax X municipal solid waste
+cross fuel tax X hydrogen
+cross carbon tax X transportation sector
+cross carbon tax X electricity sector
+cross carbon tax X residential buildings sector
+cross carbon tax X commercial buildings sector
+cross carbon tax X industry sector
+cross carbon tax X district heat and hydrogen sector
+cross carbon tax X LULUCF sector
+cross carbon tax X geoengineering sector
+cross reduce BAU subsidies X electricity
+cross reduce BAU subsidies X hard coal
+cross reduce BAU subsidies X natural gas
+cross reduce BAU subsidies X nuclear
+cross reduce BAU subsidies X hydro
+cross reduce BAU subsidies X wind
+cross reduce BAU subsidies X solar
+cross reduce BAU subsidies X biomass
+cross reduce BAU subsidies X petroleum gasoline
+cross reduce BAU subsidies X petroleum diesel
+cross reduce BAU subsidies X biofuel gasoline
+cross reduce BAU subsidies X biofuel diesel
+cross reduce BAU subsidies X jet fuel or kerosene
+cross reduce BAU subsidies X heat
+cross reduce BAU subsidies X geothermal
+cross reduce BAU subsidies X lignite
+cross reduce BAU subsidies X crude oil
+cross reduce BAU subsidies X heavy or residual fuel oil
+cross reduce BAU subsidies X LPG propane or butane
+cross reduce BAU subsidies X municipal solid waste
+cross reduce BAU subsidies X hydrogen
+cross toggle whether policies affect energy prices X electricity
+cross toggle whether policies affect energy prices X hard coal
+cross toggle whether policies affect energy prices X natural gas
+cross toggle whether policies affect energy prices X nuclear
+cross toggle whether policies affect energy prices X hydro
+cross toggle whether policies affect energy prices X wind
+cross toggle whether policies affect energy prices X solar
+cross toggle whether policies affect energy prices X biomass
+cross toggle whether policies affect energy prices X petroleum gasoline
+cross toggle whether policies affect energy prices X petroleum diesel
+cross toggle whether policies affect energy prices X biofuel gasoline
+cross toggle whether policies affect energy prices X biofuel diesel
+cross toggle whether policies affect energy prices X jet fuel or kerosene
+cross toggle whether policies affect energy prices X heat
+cross toggle whether policies affect energy prices X geothermal
+cross toggle whether policies affect energy prices X lignite
+cross toggle whether policies affect energy prices X crude oil
+cross toggle whether policies affect energy prices X heavy or residual fuel oil
+cross toggle whether policies affect energy prices X LPG propane or butane
+cross toggle whether policies affect energy prices X municipal solid waste
+cross toggle whether policies affect energy prices X hydrogen
+cross toggle whether carbon tax affects process emissions X
+cross toggle whether carbon tax affects non CO2 emissions X
+cross fuel price deregulation X electricity
+cross fuel price deregulation X hard coal
+cross fuel price deregulation X natural gas
+cross fuel price deregulation X nuclear
+cross fuel price deregulation X hydro
+cross fuel price deregulation X wind
+cross fuel price deregulation X solar
+cross fuel price deregulation X biomass
+cross fuel price deregulation X petroleum gasoline
+cross fuel price deregulation X petroleum diesel
+cross fuel price deregulation X biofuel gasoline
+cross fuel price deregulation X biofuel diesel
+cross fuel price deregulation X jet fuel or kerosene
+cross fuel price deregulation X heat
+cross fuel price deregulation X geothermal
+cross fuel price deregulation X lignite
+cross fuel price deregulation X crude oil
+cross fuel price deregulation X heavy or residual fuel oil
+cross fuel price deregulation X LPG propane or butane
+cross fuel price deregulation X municipal solid waste
+cross fuel price deregulation X hydrogen
+heat convert heat to CHP X
+heat fuel type shifting X
+hydgn shift production pathways X
+land forest set asides X
+land afforestation and reforestation X
+land forest management X
+land avoid deforestation X
+land peatland restoration X
+land forest restoration X
+RnD transportation capital cost reduction X battery electric vehicle
+RnD transportation capital cost reduction X natural gas vehicle
+RnD transportation capital cost reduction X gasoline vehicle
+RnD transportation capital cost reduction X diesel vehicle
+RnD transportation capital cost reduction X plugin hybrid vehicle
+RnD transportation capital cost reduction X LPG vehicle
+RnD transportation capital cost reduction X hydrogen vehicle
+RnD electricity capital cost reduction X hard coal es
+RnD electricity capital cost reduction X natural gas nonpeaker es
+RnD electricity capital cost reduction X nuclear es
+RnD electricity capital cost reduction X hydro es
+RnD electricity capital cost reduction X onshore wind es
+RnD electricity capital cost reduction X solar PV es
+RnD electricity capital cost reduction X solar thermal es
+RnD electricity capital cost reduction X biomass es
+RnD electricity capital cost reduction X geothermal es
+RnD electricity capital cost reduction X petroleum es
+RnD electricity capital cost reduction X natural gas peaker es
+RnD electricity capital cost reduction X lignite es
+RnD electricity capital cost reduction X offshore wind es
+RnD electricity capital cost reduction X crude oil es
+RnD electricity capital cost reduction X heavy or residual fuel oil es
+RnD electricity capital cost reduction X municipal solid waste es
+RnD building capital cost reduction X heating
+RnD building capital cost reduction X cooling and ventilation
+RnD building capital cost reduction X envelope
+RnD building capital cost reduction X lighting
+RnD building capital cost reduction X appliances
+RnD building capital cost reduction X other component
+RnD industry capital cost reduction X agriculture and forestry 01T03
+RnD industry capital cost reduction X coal mining 05
+RnD industry capital cost reduction X oil and gas extraction 06
+RnD industry capital cost reduction X other mining and quarrying 07T08
+RnD industry capital cost reduction X food beverage and tobacco 10T12
+RnD industry capital cost reduction X textiles apparel and leather 13T15
+RnD industry capital cost reduction X wood products 16
+RnD industry capital cost reduction X pulp paper and printing 17T18
+RnD industry capital cost reduction X refined petroleum and coke 19
+RnD industry capital cost reduction X chemicals 20
+RnD industry capital cost reduction X rubber and plastic products 22
+RnD industry capital cost reduction X glass and glass products 231
+RnD industry capital cost reduction X cement and other nonmetallic minerals 239
+RnD industry capital cost reduction X iron and steel 241
+RnD industry capital cost reduction X other metals 242
+RnD industry capital cost reduction X metal products except machinery and vehicles 25
+RnD industry capital cost reduction X computers and electronics 26
+RnD industry capital cost reduction X appliances and electrical equipment 27
+RnD industry capital cost reduction X other machinery 28
+RnD industry capital cost reduction X road vehicles 29
+RnD industry capital cost reduction X nonroad vehicles 30
+RnD industry capital cost reduction X other manufacturing 31T33
+RnD industry capital cost reduction X energy pipelines and gas processing 352T353
+RnD industry capital cost reduction X water and waste 36T39
+RnD industry capital cost reduction X construction 41T43
+RnD CCS capital cost reduction X
+RnD transportation fuel use reduction X battery electric vehicle
+RnD transportation fuel use reduction X natural gas vehicle
+RnD transportation fuel use reduction X gasoline vehicle
+RnD transportation fuel use reduction X diesel vehicle
+RnD transportation fuel use reduction X plugin hybrid vehicle
+RnD transportation fuel use reduction X LPG vehicle
+RnD transportation fuel use reduction X hydrogen vehicle
+RnD electricity fuel use reduction X hard coal es
+RnD electricity fuel use reduction X natural gas nonpeaker es
+RnD electricity fuel use reduction X nuclear es
+RnD electricity fuel use reduction X hydro es
+RnD electricity fuel use reduction X onshore wind es
+RnD electricity fuel use reduction X solar PV es
+RnD electricity fuel use reduction X solar thermal es
+RnD electricity fuel use reduction X biomass es
+RnD electricity fuel use reduction X geothermal es
+RnD electricity fuel use reduction X petroleum es
+RnD electricity fuel use reduction X natural gas peaker es
+RnD electricity fuel use reduction X lignite es
+RnD electricity fuel use reduction X offshore wind es
+RnD electricity fuel use reduction X crude oil es
+RnD electricity fuel use reduction X heavy or residual fuel oil es
+RnD electricity fuel use reduction X municipal solid waste es
+RnD building fuel use reduction X heating
+RnD building fuel use reduction X cooling and ventilation
+RnD building fuel use reduction X envelope
+RnD building fuel use reduction X lighting
+RnD building fuel use reduction X appliances
+RnD building fuel use reduction X other component
+RnD industry fuel use reduction X agriculture and forestry 01T03
+RnD industry fuel use reduction X coal mining 05
+RnD industry fuel use reduction X oil and gas extraction 06
+RnD industry fuel use reduction X other mining and quarrying 07T08
+RnD industry fuel use reduction X food beverage and tobacco 10T12
+RnD industry fuel use reduction X textiles apparel and leather 13T15
+RnD industry fuel use reduction X wood products 16
+RnD industry fuel use reduction X pulp paper and printing 17T18
+RnD industry fuel use reduction X refined petroleum and coke 19
+RnD industry fuel use reduction X chemicals 20
+RnD industry fuel use reduction X rubber and plastic products 22
+RnD industry fuel use reduction X glass and glass products 231
+RnD industry fuel use reduction X cement and other nonmetallic minerals 239
+RnD industry fuel use reduction X iron and steel 241
+RnD industry fuel use reduction X other metals 242
+RnD industry fuel use reduction X metal products except machinery and vehicles 25
+RnD industry fuel use reduction X computers and electronics 26
+RnD industry fuel use reduction X appliances and electrical equipment 27
+RnD industry fuel use reduction X other machinery 28
+RnD industry fuel use reduction X road vehicles 29
+RnD industry fuel use reduction X nonroad vehicles 30
+RnD industry fuel use reduction X other manufacturing 31T33
+RnD industry fuel use reduction X energy pipelines and gas processing 352T353
+RnD industry fuel use reduction X water and waste 36T39
+RnD industry fuel use reduction X construction 41T43
+RnD CCS fuel use reduction X
+geoeng direct air capture X
+settings exogenous GDP adjustment X
+GRA carbon tax revenue X regular spending
+GRA carbon tax revenue X deficit spending
+GRA carbon tax revenue X household taxes
+GRA carbon tax revenue X payroll taxes
+GRA carbon tax revenue X corporate taxes
+GRA fuel tax revenue X regular spending
+GRA fuel tax revenue X deficit spending
+GRA fuel tax revenue X household taxes
+GRA fuel tax revenue X payroll taxes
+GRA fuel tax revenue X corporate taxes
+GRA EV subsidy X regular spending
+GRA EV subsidy X deficit spending
+GRA EV subsidy X household taxes
+GRA EV subsidy X payroll taxes
+GRA EV subsidy X corporate taxes
+GRA elec gen subsidy X regular spending
+GRA elec gen subsidy X deficit spending
+GRA elec gen subsidy X household taxes
+GRA elec gen subsidy X payroll taxes
+GRA elec gen subsidy X corporate taxes
+GRA elec cap const subsidy X regular spending
+GRA elec cap const subsidy X deficit spending
+GRA elec cap const subsidy X household taxes
+GRA elec cap const subsidy X payroll taxes
+GRA elec cap const subsidy X corporate taxes
+GRA dist solar subsidy X regular spending
+GRA dist solar subsidy X deficit spending
+GRA dist solar subsidy X household taxes
+GRA dist solar subsidy X payroll taxes
+GRA dist solar subsidy X corporate taxes
+GRA fuel subsidy X regular spending
+GRA fuel subsidy X deficit spending
+GRA fuel subsidy X household taxes
+GRA fuel subsidy X payroll taxes
+GRA fuel subsidy X corporate taxes
+GRA national debt interest X regular spending
+GRA national debt interest X deficit spending
+GRA national debt interest X household taxes
+GRA national debt interest X payroll taxes
+GRA national debt interest X corporate taxes
+GRA remaining cash flow changes X regular spending
+GRA remaining cash flow changes X deficit spending
+GRA remaining cash flow changes X household taxes
+GRA remaining cash flow changes X payroll taxes
+GRA remaining cash flow changes X corporate taxes

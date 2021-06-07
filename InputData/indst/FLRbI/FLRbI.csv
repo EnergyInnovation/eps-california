@@ -1,9 +1,26 @@
-Industry,Leakage Rate (dimensionless)
-cement and other carbonate use,0.095
-natural gas and petroleum systems,-0.023
-iron and steel,0.150
-chemicals,0.265
-mining,-0.188
-waste management,0
-agriculture,0.006
-other industries,0.034
+Unit: dimensionless,Leakage Rate
+agriculture and forestry 01T03,0.005884174667079591
+coal mining 05,-0.20980392156862746
+oil and gas extraction 06,-0.8557233704292527
+other mining and quarrying 07T08,0.8181818181818182
+food beverage and tobacco 10T12,0.0029502480890438512
+textiles apparel and leather 13T15,0.0946372239747634
+wood products 16,-0.01799775028121485
+pulp paper and printing 17T18,0.009958401613513173
+refined petroleum and coke 19,0.08250664064617554
+chemicals 20,0.2646015922927678
+rubber and plastic products 22,0.2646015922927678
+glass and glass products 231,0.0950544015825915
+cement and other nonmetallic minerals 239,0.0950544015825915
+iron and steel 241,0.14969670710571925
+other metals 242,0.13454146073585943
+metal products except machinery and vehicles 25,0.011881188118811881
+computers and electronics 26,0.13286713286713286
+appliances and electrical equipment 27,0.13286713286713286
+other machinery 28,0.002005347593582888
+road vehicles 29,0.0048814504881450485
+nonroad vehicles 30,0.0048814504881450485
+other manufacturing 31T33,0.07209411372702976
+energy pipelines and gas processing 352T353,0.001528584530724549
+water and waste 36T39,0.0
+construction 41T43,0.0

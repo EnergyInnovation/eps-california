@@ -1,7 +1,7 @@
 Vehicle,Elasticity (dimensionless)
-LDVs,-0.10
+LDVs,-0.1
 HDVs,-0.15
-aircraft,-0.29
+aircraft,-0.2936
 rail,-0.15
-ships,-0.15
-motorbikes,-0.10
+ships,-0.15000000000000002
+motorbikes,-0.1
