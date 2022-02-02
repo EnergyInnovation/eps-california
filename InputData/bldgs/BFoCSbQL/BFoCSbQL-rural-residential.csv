@@ -1,7 +1,7 @@
 Dimensionless fraction of total components,standard-compliant,rebate-qualifying
-heating,0.40218068535825546,0.5978193146417445
-cooling and ventilation,0.73,0.27
-envelope,0.5660903426791277,0.4339096573208723
-lighting,0.8,0.2
-appliances,0.32982758620689656,0.6701724137931034
-other,0.4887658210850774,0.5112341789149226
+heating,0.402,0.598
+cooling and ventilation,0.730,0.27
+envelope,0.566,0.434
+lighting,0.800,0.2
+appliances,0.330,0.670
+other,0.489,0.511
