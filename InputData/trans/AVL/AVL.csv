@@ -1,7 +1,7 @@
 Vehicle Lifetime (years),Passenger,Freight
-LDVs,13.0,14.0
-HDVs,23.0,28.0
-aircraft,24.0,24.0
-rail,34.0,34.0
-ships,33.0,33.0
-motorbikes,17.0,17.0
+LDVs,13,14
+HDVs,23,28
+aircraft,24,24
+rail,34,34
+ships,33,33
+motorbikes,17,17

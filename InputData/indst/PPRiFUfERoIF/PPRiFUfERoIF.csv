@@ -1,26 +1,26 @@
 Unit: dimensionless,Perc Fuel Use Reduction
-agriculture and forestry 01T03,0.007464749792645808
-coal mining 05,0.0
-oil and gas extraction 06,0.0
-other mining and quarrying 07T08,0.005821596244131498
-food beverage and tobacco 10T12,0.008002595436357758
-textiles apparel and leather 13T15,0.13221153846153846
-wood products 16,0.04385964912280702
-pulp paper and printing 17T18,0.023910528345545766
-refined petroleum and coke 19,0.04459991254919103
-chemicals 20,0.019812758545612937
-rubber and plastic products 22,0.08301743745261564
-glass and glass products 231,0.06825938566552901
-cement and other nonmetallic minerals 239,0.063063063063063
-iron and steel 241,0.08803885853066182
-other metals 242,0.18111753371868977
-metal products except machinery and vehicles 25,0.012443168222062668
-computers and electronics 26,0.006095285483269035
-appliances and electrical equipment 27,0.009054895302773031
-other machinery 28,0.027473482872544024
-road vehicles 29,0.008566853482786265
-nonroad vehicles 30,0.008566853482786265
-other manufacturing 31T33,0.010975227343994984
-energy pipelines and gas processing 352T353,0.0
-water and waste 36T39,0.0
-construction 41T43,0.0018731602890018429
+agriculture and forestry 01T03,0.007
+coal mining 05,0
+oil and gas extraction 06,0
+other mining and quarrying 07T08,0.006
+food beverage and tobacco 10T12,0.008
+textiles apparel and leather 13T15,0.132
+wood products 16,0.044
+pulp paper and printing 17T18,0.024
+refined petroleum and coke 19,0.045
+chemicals 20,0.020
+rubber and plastic products 22,0.083
+glass and glass products 231,0.068
+cement and other nonmetallic minerals 239,0.063
+iron and steel 241,0.088
+other metals 242,0.181
+metal products except machinery and vehicles 25,0.012
+computers and electronics 26,0.006
+appliances and electrical equipment 27,0.009
+other machinery 28,0.027
+road vehicles 29,0.009
+nonroad vehicles 30,0.009
+other manufacturing 31T33,0.011
+energy pipelines and gas processing 352T353,0
+water and waste 36T39,0
+construction 41T43,0.002

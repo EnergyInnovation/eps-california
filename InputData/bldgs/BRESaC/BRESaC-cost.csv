@@ -1,7 +1,7 @@
 $/BTU,urban residential,rural residential,commercial
-heating,0.00042479669855059076,0.00042479669855059076,0.0030161596637131726
-cooling and ventilation,0.00042479669855059076,0.00042479669855059076,0.0030161596637131726
-envelope,0.0,0.0,0.0
-lighting,0.0,0.0,0.0
-appliances,0.0,0.0,0.0
-other component,0.0,0.0,0.0
+heating,0.000425,0.000425,0.00302
+cooling and ventilation,0.000425,0.000425,0.00302
+envelope,0,0,0
+lighting,0,0,0
+appliances,0,0,0
+other component,0,0,0

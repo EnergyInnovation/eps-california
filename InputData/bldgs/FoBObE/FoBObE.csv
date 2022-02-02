@@ -1,10 +1,5 @@
 Ownership by Cash Flow Entity (dimensionless),Urban Residential,Rural Residential,Commercial
-government,0.019289972368294446,0.019289972368294446,0.23714188688565077
-nonenergy industries,0.03653098831253673,0.03653098831253673,0.7111349550325727
-labor and consumers,0.9441790393191687,0.9441790393191687,0.0
-foreign entities,0.0,0.0,0.0
-electricity suppliers,0.0,0.0,0.011817324639815762
-coal suppliers,0.0,0.0,0.0016681065025235112
-natural gas and petroleum suppliers,0.0,0.0,0.03771809772677523
-biomass and biofuel suppliers,0.0,0.0,0.0005196292126620005
-other energy suppliers,0.0,0.0,0.0
+government,0.01928997,0.01928997,0.23714189
+domestic industries,0.03653099,0.03653099,0.76285811
+labor and consumers,0.94417904,0.94417904,0
+foreign entities,0,0,0
