@@ -1762,12 +1762,14 @@
 :Y-MIN 0
 :VAR Output Transportation Pollutant Emissions by Vehicle Type[LDVs,passenger,CO2]|Cars & SUVs
 :LINE-COLOR 150-150-150
-:VAR Output Transportation Pollutant Emissions by Vehicle Type[HDVs,freight,CO2]|Med & Heavy Trucks
-:LINE-COLOR 0-0-0
-:VAR Output Transportation Pollutant Emissions by Vehicle Type[aircraft,passenger,CO2]|Passenger aircraft
-:LINE-COLOR 194-223-253
 :VAR Output Transportation Pollutant Emissions by Vehicle Type[LDVs,freight,CO2]|Light Freight Trucks
 :LINE-COLOR 245-147-224
+:VAR Output Transportation Pollutant Emissions by Vehicle Type[HDVs,freight,CO2]|Med & Heavy Regional Trucks
+:LINE-COLOR 0-0-0
+:VAR Output Transportation Pollutant Emissions by Vehicle Type[motorbikes,freight,CO2]|Heavy Long-Haul Trucks
+:LINE-COLOR 173-102-0
+:VAR Output Transportation Pollutant Emissions by Vehicle Type[aircraft,passenger,CO2]|Passenger aircraft
+:LINE-COLOR 194-223-253
 :VAR Output Transportation Pollutant Emissions by Vehicle Type[HDVs,passenger,CO2]|Buses
 :LINE-COLOR 241-187-24
 :VAR Output Transportation Pollutant Emissions by Vehicle Type[aircraft,freight,CO2]|Freight aircraft
@@ -1875,14 +1877,18 @@
 :SCALE
 :STACK-FILL
 :Y-MIN 0
-:VAR Output Freight Dist Transported[HDVs,freight]|Med & Heavy Trucks
+:VAR Output Freight Dist Transported[LDVs,freight]|Light Freight Trucks
+:LINE-COLOR 245-147-224
+:VAR Output Freight Dist Transported[HDVs,freight]|Med & Heavy Regional Trucks
 :LINE-COLOR 0-0-0
+:VAR Output Freight Dist Transported[motorbikes,freight]|Heavy Long-Haul Trucks
+:LINE-COLOR 192-27-0
 :VAR Output Freight Dist Transported[rail,freight]|Freight Rail
 :LINE-COLOR 0-176-80
 :VAR Output Freight Dist Transported[ships,freight]|Freight Ships
 :LINE-COLOR 0-65-133
-:VAR Output Freight Dist Transported[LDVs,freight]|Light Freight Trucks
-:LINE-COLOR 245-147-224
+:VAR Output Freight Dist Transported[HDVs,freight]|Med & Heavy Trucks
+:LINE-COLOR 0-0-0
 :VAR Output Freight Dist Transported[aircraft,freight]|Freight Aircraft
 :LINE-COLOR 8-123-241
 
