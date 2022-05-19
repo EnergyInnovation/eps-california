@@ -1,4 +1,4 @@
-,Boolean
+﻿,Boolean
 hard coal,0
 natural gas nonpeaker,0
 nuclear,0
@@ -12,6 +12,6 @@ petroleum,1
 natural gas peaker,1
 lignite,0
 offshore wind,0
-crude oil,1
+crude oil,0
 heavy or residual fuel oil,1
 municipal solid waste,0
