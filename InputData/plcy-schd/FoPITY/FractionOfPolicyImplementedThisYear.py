@@ -1397,7 +1397,7 @@ PolicyElements = (
     ("Schedule 1",(2020,0),(2022,0),(2050,1)),
   ),
   (("bldgs distributed solar subsidy"),
-    ("Schedule 1",(2020,0),(2022,0),(2022,1),(2050,1)),
+    ("Schedule 1",(2020,0),(2022,0),(2023,1),(2050,1)),
   ),
   (("bldgs min fraction distributed solar"),
     ("Schedule 1",(2020,0),(2022,0),(2050,1)),
@@ -1604,7 +1604,7 @@ PolicyElements = (
   ),
   (("indst f gas substitution"),
     ("Schedule 1",(2020,0),(2022,0),(2050,1)),
-    ("Schedule 2",(2020,0),(2022,0),(2022,1),(2050,1)),
+    ("Schedule 2",(2020,0),(2022,0),(2023,1),(2050,1)),
   ),
   (("indst f gas destruction"),
     ("Schedule 1",(2020,0),(2022,0),(2050,1)),
@@ -4438,32 +4438,84 @@ def WritePolicyElementsFile():
     else:
       f.write(" X ".join(PolicyElement[0])+"\n")
  
+def CheckForScheduleErrors():
+  ErrorFound = 0
+
+  f = open("FoPITY-Error-Log.txt", 'w')
+
+  for PolicyElement in PolicyElements:
+    for ScheduleNum in range(1,len(PolicyElement)):
+      # Extract the ordered pairs (all elements after the first) for the schedule we are checking.
+      ScheduleToCheck = PolicyElement[ScheduleNum][1:]
+
+      # Create lists of all years and implementation fractions used in the schedule we are checking.
+      Years = []
+      ImplementationFractions = []
+      for OrderedPair in ScheduleToCheck:
+        Years.append(OrderedPair[0])
+        ImplementationFractions.append(OrderedPair[1])
+
+      # A set eliminates duplicate values, so we compare the length of the list to its length after
+      # converting it to a set.  The lengths are unequal if there are duplicate values in the list.
+      if len(set(Years)) != len(Years):
+        f.write("Duplicate year(s) found in Schedule "+str(ScheduleNum)+" of Policy Element: "+str(PolicyElement[0])+"\n") 
+        ErrorFound = 1
+      
+      # Ensure all years are between FirstYear and FinalYear inclusive.
+      if any(Year < FirstYear or Year > FinalYear for Year in Years):
+        f.write("Year(s) prior to FirstYear or after FinalYear found in Schedule "+str(ScheduleNum)+" of Policy Element: "+str(PolicyElement[0])+"\n")
+        ErrorFound = 1
+
+      # Ensure all years are in ascending order.
+      if (Years != sorted(Years)):
+        f.write("Year(s) are not in ascending order in Schedule "+str(ScheduleNum)+" of Policy Element: "+str(PolicyElement[0])+"\n")
+        ErrorFound = 1
+      
+      # Ensure all years are integers.
+      if any(not isinstance(Year, int) for Year in Years):
+        f.write("Non-integer year(s) found in Schedule "+str(ScheduleNum)+" of Policy Element: "+str(PolicyElement[0])+"\n")
+        ErrorFound = 1
+      
+      # Ensure all implementation fractions are between 0 and 1 inclusive.
+      if any(ImplementationFraction < 0 or ImplementationFraction > 1 for ImplementationFraction in ImplementationFractions):
+        f.write("Out-of-bounds implementation fraction(s) found in Schedule "+str(ScheduleNum)+" of Policy Element: "+str(PolicyElement[0])+"\n")
+        ErrorFound = 1   
+
+  f.close()
+  return(ErrorFound)
+
 
 # Main Program
 # ------------
 
-for Schedule in range(1,MaxSchedules+1):
+if CheckForScheduleErrors() == 0:
 
-  # Begin writing the .csv file for Vensim
-  f = open("FoPITY-"+str(Schedule)+".csv", 'w')
+  import os
+  if os.path.exists("FoPITY-Error-Log.txt"):
+    os.remove("FoPITY-Error-Log.txt")
 
-  WriteVensimFile()
+  for Schedule in range(1,MaxSchedules+1):
 
-  # Done writing the .csv file for Vensim
+    # Begin writing the .csv file for Vensim
+    f = open("FoPITY-"+str(Schedule)+".csv", 'w')
+
+    WriteVensimFile()
+
+    # Done writing the .csv file for Vensim
+    f.close()
+
+    # Begin writing the .csv file for the web app
+    f = open("FoPITY-"+str(Schedule)+"-WebApp.csv", 'w')
+    
+    WriteWebAppFile()
+
+    # Done writing the .csv file for the web app
+    f.close()
+
+  # Write policy elements file
+  f = open("FoPITY-policy-elements.csv",'w')
+
+  WritePolicyElementsFile()
+
+  # Done writing the policy elements file
   f.close()
-
-  # Begin writing the .csv file for the web app
-  f = open("FoPITY-"+str(Schedule)+"-WebApp.csv", 'w')
-  
-  WriteWebAppFile()
-
-  # Done writing the .csv file for the web app
-  f.close()
-
-# Write policy elements file
-f = open("FoPITY-policy-elements.csv",'w')
-
-WritePolicyElementsFile()
-
-# Done writing the policy elements file
-f.close()
