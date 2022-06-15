@@ -5,7 +5,7 @@ title:	"California EPS Version History"
 This page tracks updates that have been made with each version of the California Energy Policy Simulator.
 
 
-### **3.3.1 - June 7, 2022**
+### **3.3.1 - June 15, 2022**
 
 
 * New Input-Output Model
