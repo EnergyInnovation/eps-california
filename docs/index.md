@@ -11,6 +11,10 @@ The California Energy Policy Simulator may be used on this website through your 
 
 <p><a href="https://github.com/Energy-Innovation/eps-california/archive/refs/tags/3.3.1.zip" class="btn">Download the California Energy Policy Simulator</a></p>
 
+## Findings
+
+Energy Innovation released a report, [California Energy Policy Simulator Update: Earlier Action Delivers Social and Economic Benefits](https://energyinnovation.org/publication/california-energy-policy-simulator-3-3-1-update-earlier-action-delivers-social-and-economic-benefits/), which explores the current state policy mix and options for deeper decarbonization using the California EPS. Full documentation for the scenario assumptions can be found at the documentation links below.
+
 ## Documentation
 
 Documentation of source data, assumptions, and policy scenarios is available [here](https://github.com/Energy-Innovation/eps-california/raw/main/Policy%20Assumptions%20and%20Sources.docx). 
@@ -18,6 +22,5 @@ Documentation of the model is available [here](https://us.energypolicy.solutions
 
 ## Other Information
 
-* [Acknowledgement of Contributors to California Adaptation](acknowledgement.html)
 * [California EPS Version History](version-history.html)
 * [Software License and Image Credits](software-license.html)

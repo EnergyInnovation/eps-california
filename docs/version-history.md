@@ -5,8 +5,11 @@ title:	"California EPS Version History"
 This page tracks updates that have been made with each version of the California Energy Policy Simulator.
 
 
-### **3.3.1 - June 15, 2022**
+### **3.3.1 - June 16, 2022**
 
+* New Input Data
+  * Completely updated the input data and extended the time horizon from 2030 to 2050
+  * New data uses a mix of CEC projections, E3 Pathways data, and other publicly available sources to project future energy demand and emissions.
 
 * New Input-Output Model
   * An economic input/output (I/O) model has been added as a component of the Energy Policy Simulator.
