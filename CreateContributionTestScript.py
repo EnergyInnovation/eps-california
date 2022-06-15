@@ -13,20 +13,22 @@
 # ----------
 # Rather than including input and output file names in the code below, we assign all the file
 # names to variables in this section.  This allows the names to be easily changed if desired.
-ModelFile = "EPS.mdl" # The name of the Vensim model file (typically with .mdl or .vpm extension)
+ModelFile = "EPS.mdl" # The name of the Vensim model file (typically with .mdl or .vpmx extension)
+FirstYear = "2020" # The first year you wish to include in the output file (cannot be prior to first simulated year)
+FinalYear = "2050" # The last year you wish to include in the output file (cannot be later than last simulated year)
 OutputScript = "GeneratedContributionTestScript.cmd" # The desired filename of the Vensim command script to be generated
 RunResultsFile = "ContributionTestResults.tsv" # The desired filename for TSV file containing model run results
-OutputVarsFile = "OutputVarsToExport.lst" # The name of the file containing a list of variables to be included in the RunResultsFile
-                                          # May optionally also be used as a SAVELIST for Vensim (see below)
+OutputVarsFile = "OutputVarsForWedgeDiagram.lst" # The name of the file containing a list of variables to be included in the RunResultsFile
+                                                 # May optionally also be used as a SAVELIST for Vensim (see below)
 
 # Other Settings
 # --------------
-RunName = "MostRecentRun" # The desired name for all runs performed.  Used as the filename for the VDF files that Vensim creates
+RunName = "MostRecentRun" # The desired name for all runs performed.  Used as the filename for the .vdfx files that Vensim creates
 EnableOrDisableGroups = "Disable" # Should each group be enabled or disabled in turn?
 								 # Essentially, this is testing either the contribution of a group in the proximity of the
 								 # BAU case ("Enable") or in the proximity of a scenario defined in the non-zero values of
 								 # the policies listed below ("Disable").
-PolicySchedule = 1 # The number of the policy implementation schedule file to be used (in InputData/plcy-schd/FoPITY)
+PolicySchedule = 2 # The number of the policy implementation schedule file to be used (in InputData/plcy-schd/FoPITY)
 
 
 # Index definitions
@@ -62,206 +64,257 @@ Group = 4
 
 PotentialPolicies = (
 
-	# Transportation Sector Policies
-	(False,"Percentage Reduction of Separately Regulated Pollutants[LDVs]","Conventional Pollutant Standards - LDVs",[0,1],"Conventional Pollutant Standard"),
-	(False,"Percentage Reduction of Separately Regulated Pollutants[HDVs]","Conventional Pollutant Standards - HDVs",[0,1],"Conventional Pollutant Standard"),
-	(False,"Percentage Reduction of Separately Regulated Pollutants[aircraft]","Conventional Pollutant Standards - aircraft",[0,1],"Conventional Pollutant Standard"),
-	(False,"Percentage Reduction of Separately Regulated Pollutants[rail]","Conventional Pollutant Standards - rail",[0,1],"Conventional Pollutant Standard"),
-	(False,"Percentage Reduction of Separately Regulated Pollutants[ships]","Conventional Pollutant Standards - ships",[0,1],"Conventional Pollutant Standard"),
-	(False,"Percentage Reduction of Separately Regulated Pollutants[motorbikes]","Conventional Pollutant Standards - motorbikes",[0,1],"Conventional Pollutant Standard"),
-	(False,"Boolean EV Perks","Electric Vehicle Perks",[0,1],"EV Perks"),
-	(False,"Additional Minimum Required EV Sales Percentage[passenger,LDVs]","Electric Vehicle Sales Mandate - Passenger LDVs",[0,1],"EV Sales Mandate"),
-	(False,"Additional Minimum Required EV Sales Percentage[passenger,HDVs]","Electric Vehicle Sales Mandate - Passenger HDVs",[0,1],"EV Sales Mandate"),
-	(False,"Additional Minimum Required EV Sales Percentage[freight,HDVs]","Electric Vehicle Sales Mandate - Freight HDVs",[0,1],"EV Sales Mandate"),
-	(False,"Additional Minimum Required EV Sales Percentage[passenger,motorbikes]","Electric Vehicle Sales Mandate - Passenger Motorbikes",[0,1],"EV Sales Mandate"),
-	(False,"Additional EV Subsidy Percentage[passenger,LDVs]","Electric Vehicle Subsidy - Passenger LDVs",[0,0.5],"EV Subsidy"),
-	(False,"LDVs Feebate Rate","Feebate",[0,1],"Feebate"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,LDVs]","Fuel Economy Standard - Gasoline Engine LDVs",[0,1],"Vehicle Fuel Economy Standards"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,HDVs]","Fuel Economy Standard - Diesel Engine HDVs",[0,0.66],"Vehicle Fuel Economy Standards"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,aircraft]","Fuel Economy Standard - All Aircraft",[0,0.54],"Vehicle Fuel Economy Standards"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,rail]","Fuel Economy Standard - All Rail",[0,0.2],"Vehicle Fuel Economy Standards"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,ships]","Fuel Economy Standard - All Ships",[0,0.2],"Vehicle Fuel Economy Standards"),
-	(False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,motorbikes]","Fuel Economy Standard - Gasoline Engine Motorbikes",[0,0.74],"Vehicle Fuel Economy Standards"),
-	(False,"Additional LCFS Percentage","Low Carbon Fuel Standard",[0,0.2],"Low Carbon Fuel Standard"),
-	(False,"Fraction of TDM Package Implemented[passenger]","Transportation Demand Management - Passengers",[0,1],"Transportation Demand Management"),
-	(False,"Fraction of TDM Package Implemented[freight]","Transportation Demand Management - Freight",[0,1],"Transportation Demand Management"),
+    (True, "Additional Minimum Required EV Sales Percentage[passenger,LDVs]","Additional Minimum Required EV Sales Percentage[passenger,LDVs]",[0,1],"Passenger Car ZEV Sales Standard"),
+    (True, "Additional Minimum Required EV Sales Percentage[passenger,HDVs]","Additional Minimum Required EV Sales Percentage[passenger,HDVs]",[0,1],"California HDV Rules"),
+    (True, "Additional Minimum Required EV Sales Percentage[passenger,motorbikes]","Additional Minimum Required EV Sales Percentage[passenger,motorbikes]",[0,1],"California HDV Rules"),
+    (True, "Additional Minimum Required EV Sales Percentage[freight,LDVs]","Additional Minimum Required EV Sales Percentage[freight,LDVs]",[0,1],"California HDV Rules"),
+    (True, "Additional Minimum Required EV Sales Percentage[freight,HDVs]","Additional Minimum Required EV Sales Percentage[freight,HDVs]",[0,1],"California HDV Rules"),
+    (True, "Additional Minimum Required EV Sales Percentage[freight,motorbikes]","Additional Minimum Required EV Sales Percentage[freight,motorbikes]",[0,1],"California HDV Rules"),
+    (True, "Boolean Rebate Program for Efficient Components[heating]","Boolean Rebate Program for Efficient Components[heating]",[0,1],"Building Codes and Appliance Standards"),
+    (True, "Boolean Rebate Program for Efficient Components[cooling and ventilation]","Boolean Rebate Program for Efficient Components[cooling and ventilation]",[0,1],"Building Codes and Appliance Standards"),
+    (True, "Boolean Rebate Program for Efficient Components[appliances]","Boolean Rebate Program for Efficient Components[appliances]",[0,1],"Building Codes and Appliance Standards"),
+    (True, "Electricity Sector Fraction of Potential Additional CCS Achieved[petroleum es]","Electricity Sector Fraction of Potential Additional CCS Achieved[petroleum es]",[0,1],"Power Sector Gas Regs"),
+    (True, "Electricity Sector Fraction of Potential Additional CCS Achieved[natural gas peaker es]","Electricity Sector Fraction of Potential Additional CCS Achieved[natural gas peaker es]",[0,1],"Power Sector Gas Regs"),
+    (True, "Fraction of Additional Demand Response Potential Achieved","Fraction of Additional Demand Response Potential Achieved",[0,1],"Grid Flexibility"),
+    (True, "Fraction of Additional Grid Battery Storage Potential Achieved","Fraction of Additional Grid Battery Storage Potential Achieved",[0,1],"Grid Flexibility"),
+    (True, "Fraction of Afforestation and Reforestation Achieved","Fraction of Afforestation and Reforestation Achieved",[0,1],"Afforestation and Reforestation"),
+    (True, "Fraction of Cement Measures Achieved","Fraction of Cement Measures Achieved",[0,1],"Cement Clinker Substitution"),
+    (True, "Fraction of Cropland and Rice Measures Achieved","Fraction of Cropland and Rice Measures Achieved",[0,1],"Cropland Measures"),
+    (True, "Fraction of F Gas Destruction Achieved","Fraction of F Gas Destruction Achieved",[0,1],"F-Gas Policies"),
+    (True, "Fraction of F Gas Inspct Maint Retrofit Achieved","Fraction of F Gas Inspct Maint Retrofit Achieved",[0,1],"F-Gas Policies"),
+    (True, "Fraction of F Gas Recovery Achieved","Fraction of F Gas Recovery Achieved",[0,1],"F-Gas Policies"),
+    (True, "Fraction of F Gas Substitution Achieved","Fraction of F Gas Substitution Achieved",[0,1],"F-Gas Policies"),
+    (True, "Fraction of Hydrogen Production Pathways Shifted","Fraction of Hydrogen Production Pathways Shifted",[0,1],"Hydrogen Electrolysis"),
+    (True, "Fraction of Improved Forest Management Achieved","Fraction of Improved Forest Management Achieved",[0,1],"Forest Management"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[agriculture and forestry 01T03,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[agriculture and forestry 01T03,electricity if]",[0,0.9],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[coal mining 05,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[coal mining 05,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[coal mining 05,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[coal mining 05,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[oil and gas extraction 06,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[oil and gas extraction 06,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[oil and gas extraction 06,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[oil and gas extraction 06,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other mining and quarrying 07T08,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other mining and quarrying 07T08,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other mining and quarrying 07T08,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other mining and quarrying 07T08,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[food beverage and tobacco 10T12,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[food beverage and tobacco 10T12,electricity if]",[0,0.88],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[food beverage and tobacco 10T12,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[food beverage and tobacco 10T12,hydrogen if]",[0,0.12],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[textiles apparel and leather 13T15,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[textiles apparel and leather 13T15,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[textiles apparel and leather 13T15,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[textiles apparel and leather 13T15,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[wood products 16,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[wood products 16,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[wood products 16,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[wood products 16,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[pulp paper and printing 17T18,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[pulp paper and printing 17T18,electricity if]",[0,0.97],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[pulp paper and printing 17T18,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[pulp paper and printing 17T18,hydrogen if]",[0,0.03],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[refined petroleum and coke 19,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[refined petroleum and coke 19,electricity if]",[0,0.48],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[refined petroleum and coke 19,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[refined petroleum and coke 19,hydrogen if]",[0,0.52],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[chemicals 20,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[chemicals 20,electricity if]",[0,0.47],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[chemicals 20,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[chemicals 20,hydrogen if]",[0,0.53],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[rubber and plastic products 22,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[rubber and plastic products 22,electricity if]",[0,0.47],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[rubber and plastic products 22,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[rubber and plastic products 22,hydrogen if]",[0,0.53],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[glass and glass products 231,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[glass and glass products 231,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[glass and glass products 231,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[glass and glass products 231,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[cement and other nonmetallic minerals 239,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[cement and other nonmetallic minerals 239,electricity if]",[0,0.22],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[cement and other nonmetallic minerals 239,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[cement and other nonmetallic minerals 239,hydrogen if]",[0,0.78],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,electricity if]",[0,0.29],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[iron and steel 241,hydrogen if]",[0,0.71],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,electricity if]",[0,0.44],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other metals 242,hydrogen if]",[0,0.56],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[metal products except machinery and vehicles 25,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[metal products except machinery and vehicles 25,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[metal products except machinery and vehicles 25,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[metal products except machinery and vehicles 25,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[computers and electronics 26,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[computers and electronics 26,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[computers and electronics 26,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[computers and electronics 26,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[appliances and electrical equipment 27,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[appliances and electrical equipment 27,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[appliances and electrical equipment 27,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[appliances and electrical equipment 27,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,electricity if]",[0,0.94],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other machinery 28,hydrogen if]",[0,0.06],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,electricity if]",[0,0.94],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[road vehicles 29,hydrogen if]",[0,0.06],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[nonroad vehicles 30,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[nonroad vehicles 30,electricity if]",[0,0.94],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[nonroad vehicles 30,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[nonroad vehicles 30,hydrogen if]",[0,0.06],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other manufacturing 31T33,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other manufacturing 31T33,electricity if]",[0,0.92],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[other manufacturing 31T33,hydrogen if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[other manufacturing 31T33,hydrogen if]",[0,0.08],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[energy pipelines and gas processing 352T353,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[energy pipelines and gas processing 352T353,electricity if]",[0,0.9],"Industrial Fuel Switching"),
+    (True, "Fraction of Industrial Fuel Use Shifted to Other Fuels[construction 41T43,electricity if]","Fraction of Industrial Fuel Use Shifted to Other Fuels[construction 41T43,electricity if]",[0,0.9],"Industrial Fuel Switching"),
+    (True, "Fraction of Livestock Measures Achieved","Fraction of Livestock Measures Achieved",[0,1],"Livestock Measures"),
+    (True, "Fraction of Methane Capture Opportunities Achieved[coal mining 05]","Fraction of Methane Capture Opportunities Achieved[coal mining 05]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Capture Opportunities Achieved[oil and gas extraction 06]","Fraction of Methane Capture Opportunities Achieved[oil and gas extraction 06]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Capture Opportunities Achieved[energy pipelines and gas processing 352T353]","Fraction of Methane Capture Opportunities Achieved[energy pipelines and gas processing 352T353]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Capture Opportunities Achieved[water and waste 36T39]","Fraction of Methane Capture Opportunities Achieved[water and waste 36T39]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Destruction Opportunities Achieved[coal mining 05]","Fraction of Methane Destruction Opportunities Achieved[coal mining 05]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Destruction Opportunities Achieved[oil and gas extraction 06]","Fraction of Methane Destruction Opportunities Achieved[oil and gas extraction 06]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Destruction Opportunities Achieved[energy pipelines and gas processing 352T353]","Fraction of Methane Destruction Opportunities Achieved[energy pipelines and gas processing 352T353]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of Methane Destruction Opportunities Achieved[water and waste 36T39]","Fraction of Methane Destruction Opportunities Achieved[water and waste 36T39]",[0,1],"Methane Capture and Destruction"),
+    (True, "Fraction of N2O Abatement Achieved","Fraction of N2O Abatement Achieved",[0,1],"N2O Abatement"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[heating,urban residential]","Fraction of New Bldg Components Shifted to Other Fuels[heating,urban residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[heating,rural residential]","Fraction of New Bldg Components Shifted to Other Fuels[heating,rural residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[heating,commercial]","Fraction of New Bldg Components Shifted to Other Fuels[heating,commercial]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[appliances,urban residential]","Fraction of New Bldg Components Shifted to Other Fuels[appliances,urban residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[appliances,rural residential]","Fraction of New Bldg Components Shifted to Other Fuels[appliances,rural residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[appliances,commercial]","Fraction of New Bldg Components Shifted to Other Fuels[appliances,commercial]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[other component,urban residential]","Fraction of New Bldg Components Shifted to Other Fuels[other component,urban residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[other component,rural residential]","Fraction of New Bldg Components Shifted to Other Fuels[other component,rural residential]",[0,1],"Building Electrification"),
+    (True, "Fraction of New Bldg Components Shifted to Other Fuels[other component,commercial]","Fraction of New Bldg Components Shifted to Other Fuels[other component,commercial]",[0,1],"Building Electrification"),
+    (True, "Industry Sector Fraction of Potential Additional CCS Achieved[chemicals 20,process emissions]","Industry Sector Fraction of Potential Additional CCS Achieved[chemicals 20,process emissions]",[0,0.5],"Industrial CCS"),
+    (True, "Industry Sector Fraction of Potential Additional CCS Achieved[cement and other nonmetallic minerals 239,process emissions]","Industry Sector Fraction of Potential Additional CCS Achieved[cement and other nonmetallic minerals 239,process emissions]",[0,0.5],"Industrial CCS"),
+    (True, "Industry Sector Fraction of Potential Additional CCS Achieved[iron and steel 241,process emissions]","Industry Sector Fraction of Potential Additional CCS Achieved[iron and steel 241,process emissions]",[0,0.5],"Industrial CCS"),
+    (True, "Percent of Travel Demand Shifted to Other Modes or Eliminated[passenger,LDVs]","Percent of Travel Demand Shifted to Other Modes or Eliminated[passenger,LDVs]",[0,0.26],"Passenger Mode Shifting"),
+    (True, "Percent Reduction in Fossil Fuel Exports[petroleum gasoline]","Percent Reduction in Fossil Fuel Exports[petroleum gasoline]",[0,0.8567],"Reduction in Fossil Fuel Exports"),
+    (True, "Percent Reduction in Fossil Fuel Exports[petroleum diesel]","Percent Reduction in Fossil Fuel Exports[petroleum diesel]",[0,0.8567],"Reduction in Fossil Fuel Exports"),
+    (True, "Percent Reduction in Fossil Fuel Exports[crude oil]","Percent Reduction in Fossil Fuel Exports[crude oil]",[0,0.8567],"Reduction in Fossil Fuel Exports"),
+    (True, "Percent Reduction in Nonenergy Nonagriculture Industry Product Demand[cement and other nonmetallic minerals 239]","Percent Reduction in Nonenergy Nonagriculture Industry Product Demand[cement and other nonmetallic minerals 239]",[0,0.1],"Material Efficiency"),
+    (True, "Percent Reduction in Nonenergy Nonagriculture Industry Product Demand[iron and steel 241]","Percent Reduction in Nonenergy Nonagriculture Industry Product Demand[iron and steel 241]",[0,0.15],"Reduction in Industry Product Demand"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[passenger,LDVs]","Percentage Additional Improvement of Fuel Economy Std[passenger,LDVs]",[0,0.6],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[passenger,HDVs]","Percentage Additional Improvement of Fuel Economy Std[passenger,HDVs]",[0,0.5],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[passenger,aircraft]","Percentage Additional Improvement of Fuel Economy Std[passenger,aircraft]",[0,0.6],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[passenger,rail]","Percentage Additional Improvement of Fuel Economy Std[passenger,rail]",[0,0.25],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,LDVs]","Percentage Additional Improvement of Fuel Economy Std[freight,LDVs]",[0,0.5],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,HDVs]","Percentage Additional Improvement of Fuel Economy Std[freight,HDVs]",[0,0.5],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,aircraft]","Percentage Additional Improvement of Fuel Economy Std[freight,aircraft]",[0,0.6],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,rail]","Percentage Additional Improvement of Fuel Economy Std[freight,rail]",[0,0.25],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,ships]","Percentage Additional Improvement of Fuel Economy Std[freight,ships]",[0,0.8],"Fuel Economy Standards"),
+    (True, "Percentage Additional Improvement of Fuel Economy Std[freight,motorbikes]","Percentage Additional Improvement of Fuel Economy Std[freight,motorbikes]",[0,0.5],"Fuel Economy Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture and forestry 01T03,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[coal mining 05,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[oil and gas extraction 06,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other mining and quarrying 07T08,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[food beverage and tobacco 10T12,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[textiles apparel and leather 13T15,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[wood products 16,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[pulp paper and printing 17T18,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,biomass if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,biomass if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,crude oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[refined petroleum and coke 19,crude oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals 20,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[rubber and plastic products 22,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[glass and glass products 231,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other nonmetallic minerals 239,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel 241,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other metals 242,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[metal products except machinery and vehicles 25,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[computers and electronics 26,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[appliances and electrical equipment 27,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other machinery 28,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[road vehicles 29,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[nonroad vehicles 30,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,hard coal if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,hard coal if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[other manufacturing 31T33,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[energy pipelines and gas processing 352T353,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[energy pipelines and gas processing 352T353,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[water and waste 36T39,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[water and waste 36T39,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,electricity if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,electricity if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,natural gas if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,natural gas if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,petroleum diesel if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,petroleum diesel if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,heavy or residual fuel oil if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,heavy or residual fuel oil if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,LPG propane or butane if]","Percentage Improvement in Eqpt Efficiency Standards above BAU[construction 41T43,LPG propane or butane if]",[0,0.14],"Industrial Energy Efficiency Standards"),
+    (True, "Percentage Increase in Transmission Capacity vs BAU","Percentage Increase in Transmission Capacity vs BAU",[0,1],"Grid Flexibility"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[heating,urban residential]","Reduction in E Use Allowed by Component Eff Std[heating,urban residential]",[0,0.11],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[heating,rural residential]","Reduction in E Use Allowed by Component Eff Std[heating,rural residential]",[0,0.11],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[heating,commercial]","Reduction in E Use Allowed by Component Eff Std[heating,commercial]",[0,0.159],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,urban residential]","Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,urban residential]",[0,0.136],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,rural residential]","Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,rural residential]",[0,0.136],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,commercial]","Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,commercial]",[0,0.133],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[envelope,urban residential]","Reduction in E Use Allowed by Component Eff Std[envelope,urban residential]",[0,0.25],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[envelope,rural residential]","Reduction in E Use Allowed by Component Eff Std[envelope,rural residential]",[0,0.25],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[envelope,commercial]","Reduction in E Use Allowed by Component Eff Std[envelope,commercial]",[0,0.25],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[lighting,urban residential]","Reduction in E Use Allowed by Component Eff Std[lighting,urban residential]",[0,0.2],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[lighting,rural residential]","Reduction in E Use Allowed by Component Eff Std[lighting,rural residential]",[0,0.2],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[lighting,commercial]","Reduction in E Use Allowed by Component Eff Std[lighting,commercial]",[0,0.2],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[appliances,urban residential]","Reduction in E Use Allowed by Component Eff Std[appliances,urban residential]",[0,0.141],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[appliances,rural residential]","Reduction in E Use Allowed by Component Eff Std[appliances,rural residential]",[0,0.141],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[appliances,commercial]","Reduction in E Use Allowed by Component Eff Std[appliances,commercial]",[0,0.141],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[other component,urban residential]","Reduction in E Use Allowed by Component Eff Std[other component,urban residential]",[0,0.11],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[other component,rural residential]","Reduction in E Use Allowed by Component Eff Std[other component,rural residential]",[0,0.11],"Building Codes and Appliance Standards"),
+    (True, "Reduction in E Use Allowed by Component Eff Std[other component,commercial]","Reduction in E Use Allowed by Component Eff Std[other component,commercial]",[0,0.11],"Building Codes and Appliance Standards"),
+    (True, "Renewable Portfolio Std Percentage","Renewable Portfolio Std Percentage",[0,1],"100% Clean Electricity Standard"),
+    (True, "Subsidy for Elec Production by Fuel[nuclear es,preexisting retiring]","Subsidy for Elec Production by Fuel[nuclear es,preexisting retiring]",[0,11],"Electricity PTC/ITC"),
+    (True, "Subsidy for Elec Production by Fuel[onshore wind es,preexisting retiring]","Subsidy for Elec Production by Fuel[onshore wind es,preexisting retiring]",[0,5],"Electricity PTC/ITC"),
+    (True, "Subsidy for Elec Production by Fuel[onshore wind es,newly built]","Subsidy for Elec Production by Fuel[onshore wind es,newly built]",[0,5],"Electricity PTC/ITC")
 
-	# Buildings Sector Policies
-	(False,"Percent New Nonelec Component Sales Shifted to Elec[urban residential]","Building Component Electrification - Urban Residential",[0,1],"Building Component Electrification"),
-	(False,"Percent New Nonelec Component Sales Shifted to Elec[rural residential]","Building Component Electrification - Rural Residential",[0,1],"Building Component Electrification"),
-	(False,"Percent New Nonelec Component Sales Shifted to Elec[commercial]","Building Component Electrification - Commercial",[0,1],"Building Component Electrification"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[heating,urban residential]","Building Energy Efficiency Standards - Urban Residential Heating",[0,0.22],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,urban residential]","Building Energy Efficiency Standards - Urban Residential Cooling and Ventilation",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[envelope,urban residential]","Building Energy Efficiency Standards - Urban Residential Envelope",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[lighting,urban residential]","Building Energy Efficiency Standards - Urban Residential Lighting",[0,0.4],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[appliances,urban residential]","Building Energy Efficiency Standards - Urban Residential Appliances",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[other component,urban residential]","Building Energy Efficiency Standards - Urban Residential Other Components",[0,0.11],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[heating,rural residential]","Building Energy Efficiency Standards - Rural Residential Heating",[0,0.22],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,rural residential]","Building Energy Efficiency Standards - Rural Residential Cooling and Ventilation",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[envelope,rural residential]","Building Energy Efficiency Standards - Rural Residential Envelope",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[lighting,rural residential]","Building Energy Efficiency Standards - Rural Residential Lighting",[0,0.4],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[appliances,rural residential]","Building Energy Efficiency Standards - Rural Residential Appliances",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[other component,rural residential]","Building Energy Efficiency Standards - Rural Residential Other Components",[0,0.11],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[heating,commercial]","Building Energy Efficiency Standards - Commercial Heating",[0,0.22],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[cooling and ventilation,commercial]","Building Energy Efficiency Standards - Commercial Cooling and Ventilation",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[envelope,commercial]","Building Energy Efficiency Standards - Commercial Envelope",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[lighting,commercial]","Building Energy Efficiency Standards - Commercial Lighting",[0,0.4],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[appliances,commercial]","Building Energy Efficiency Standards - Commercial Appliances",[0,0.38],"Building Energy Efficiency Standards"),
-	(False,"Reduction in E Use Allowed by Component Eff Std[other component,commercial]","Building Energy Efficiency Standards - Commercial Other Components",[0,0.11],"Building Energy Efficiency Standards"),
-	(False,"Boolean Improved Contractor Edu and Training","Contractor Training",[0,1],"Contractor Training"),
-	(False,"Min Fraction of Total Elec Demand to be Met by Distributed Solar PV","Distributed Solar Carve-Out",[0,0.24],"Distributed Solar Promotion"),
-	(False,"Perc Subsidy for Distributed Solar PV Capacity","Distributed Solar Subsidy",[0,0.5],"Distributed Solar Promotion"),
-	(False,"Boolean Improved Device Labeling","Improved Labeling",[0,1],"Improved Labeling"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[heating]","Increased Retrofitting - Heating",[0,0.034],"Increased Retrofitting"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[cooling and ventilation]","Increased Retrofitting - Cooling and Ventilation",[0,0.034],"Increased Retrofitting"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[envelope]","Increased Retrofitting - Envelope",[0,0.034],"Increased Retrofitting"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[lighting]","Increased Retrofitting - Lighting",[0,0.034],"Increased Retrofitting"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[appliances]","Increased Retrofitting - Appliances",[0,0.034],"Increased Retrofitting"),
-	(False,"Fraction of Commercial Components Replaced Annually due to Retrofitting Policy[other component]","Increased Retrofitting - Other Components",[0,0.034],"Increased Retrofitting"),
-	(False,"Boolean Rebate Program for Efficient Components[heating]","Rebate for Efficient Products - Heating",[0,1],"Rebate for Efficient Products"),
-	(False,"Boolean Rebate Program for Efficient Components[cooling and ventilation]","Rebate for Efficient Products - Cooling and Ventilation",[0,1],"Rebate for Efficient Products"),
-	(False,"Boolean Rebate Program for Efficient Components[appliances]","Rebate for Efficient Products - Appliances",[0,1],"Rebate for Efficient Products"),
-
-	# Electricity Sector Policies
-	(False,"Boolean Ban New Power Plants[hard coal es]","Ban New Power Plants - Hard Coal",[0,1],"Ban New Power Plants"),
-	(False,"Boolean Ban New Power Plants[natural gas nonpeaker es]","Ban New Power Plants - Natural Gas Nonpeaker",[0,1],"Ban New Power Plants"),
-	(False,"Boolean Ban New Power Plants[nuclear es]","Ban New Power Plants - Nuclear",[0,1],"Ban New Power Plants"),
-	(False,"Boolean Ban New Power Plants[hydro es]","Ban New Power Plants - Hydro",[0,1],"Ban New Power Plants"),
-	(False,"Boolean Ban New Power Plants[lignite es]","Ban New Power Plants - Lignite",[0,1],"Ban New Power Plants"),
-	(False,"Percent Change in Electricity Exports","Change Electricity Exports",[-0.5,1],"Electricity Imports and Exports"),
-	(False,"Percent Change in Electricity Imports","Change Electricity Imports",[-0.5,1],"Electricity Imports and Exports"),
-	(False,"Fraction of Additional Demand Response Potential Achieved","Demand Response",[0,1],"Demand Response"),
-	(False,"Annual Additional Capacity Retired due to Early Retirement Policy[hard coal es]","Early Retirement of Power Plants - Hard Coal",[0,10000],"Early Retirement of Power Plants"),
-	(False,"Annual Additional Capacity Retired due to Early Retirement Policy[nuclear es]","Early Retirement of Power Plants - Nuclear",[0,10000],"Early Retirement of Power Plants"),
-	(False,"Additional Battery Storage Annual Growth Percentage","Grid-Scale Electricity Storage",[0,0.16],"Grid-Scale Electricity Storage"),
-	(False,"Percentage Increase in Transmission Capacity vs BAU","Increase Transmission",[0,1.13],"Increase Transmission"),
-	(False,"Nuclear Capacity Lifetime Extension","Nuclear Plant Lifetime Extension",[0,20],"Nuclear Lifetime Extension"),
-	(False,"Percentage Reduction in Plant Downtime[natural gas nonpeaker es,preexisting retiring]","Reduce Plant Downtime - Preexisting Natural Gas Nonpeaker",[0,0.6],"Reduce Plant Downtime"),
-	(False,"Percentage Reduction in Plant Downtime[onshore wind es,newly built]","Reduce Plant Downtime - New Onshore Wind",[0,0.25],"Reduce Plant Downtime"),
-	(False,"Percentage Reduction in Plant Downtime[solar PV es,newly built]","Reduce Plant Downtime - New Solar PV",[0,0.3],"Reduce Plant Downtime"),
-	(False,"Percentage Reduction in Plant Downtime[offshore wind es,newly built]","Reduce Plant Downtime - New Offshore Wind",[0,0.25],"Reduce Plant Downtime"),
-	(False,"Percent Reduction in Soft Costs of Capacity Construction[onshore wind es]","Reduce Soft Costs - Onshore Wind",[0,0.9],"Reduce Soft Costs"),
-	(False,"Percent Reduction in Soft Costs of Capacity Construction[solar PV es]","Reduce Soft Costs - Solar PV",[0,0.9],"Reduce Soft Costs"),
-	(False,"Percent Reduction in Soft Costs of Capacity Construction[offshore wind es]","Reduce Soft Costs - Offshore Wind",[0,0.9],"Reduce Soft Costs"),
-	(False,"Percentage TnD Losses Avoided","Reduce Transmission & Distribution Losses",[0,0.4],"Reduce T&D Losses"),
-	(False,"Additional Renewable Portfolio Std Percentage","Renewable Portfolio Standard",[0,0.88],"Renewable Portfolio Standard"),
-	(False,"Subsidy for Elec Production by Fuel[nuclear es]","Subsidy for Electricity Production - Nuclear",[0,60],"Subsidy for Electricity Production"),
-	(False,"Subsidy for Elec Production by Fuel[onshore wind es]","Subsidy for Electricity Production - Onshore Wind",[0,60],"Subsidy for Electricity Production"),
-	(False,"Subsidy for Elec Production by Fuel[solar PV es]","Subsidy for Electricity Production - Solar PV",[0,60],"Subsidy for Electricity Production"),
-	(False,"Subsidy for Elec Production by Fuel[solar thermal es]","Subsidy for Electricity Production - Solar Thermal",[0,60],"Subsidy for Electricity Production"),
-	(False,"Subsidy for Elec Production by Fuel[biomass es]","Subsidy for Electricity Production - Biomass",[0,60],"Subsidy for Electricity Production"),
-	(False,"Subsidy for Elec Production by Fuel[offshore wind es]","Subsidy for Electricity Production - Offshore Wind",[0,60],"Subsidy for Electricity Production"),
-
-	# Industry Sector Policies
-	(False,"Fraction of Cement Clinker Substitution Made","Cement Clinker Substitution",[0,1],"Cement Clinker Substitution"),
-	(False,"Fraction of Potential Cogeneration and Waste Heat Recovery Adopted","Cogeneration and Waste Heat Recovery",[0,1],"Cogeneration and Waste Heat Recovery"),
-	(False,"Fraction of Energy Savings from Early Facility Retirement Achieved","Early Retirement of Industrial Facilities",[0,1],"Early Retirement of Industrial Facilities"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[cement and other carbonates]","Industry Energy Efficiency Standards - Cement",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[natural gas and petroleum systems]","Industry Energy Efficiency Standards - Natural Gas and Petroleum",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[iron and steel]","Industry Energy Efficiency Standards - Iron and Steel",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[chemicals]","Industry Energy Efficiency Standards - Chemicals",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[mining]","Industry Energy Efficiency Standards - Mining",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[waste management]","Industry Energy Efficiency Standards - Waste Management",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture]","Industry Energy Efficiency Standards - Agriculture",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Percentage Improvement in Eqpt Efficiency Standards above BAU[other industries]","Industry Energy Efficiency Standards - Other Industries",[0,0.33],"Industry Energy Efficiency Standards"),
-	(False,"Fraction of Installation and System Integration Issues Remedied","Improved System Design",[0,1],"Improved System Design"),
-	(False,"Fraction of Hard Coal Use Converted to Other Fuels","Electrify Hard Coal Processes",[0,1],"Industrial Electrification"),
-	(False,"Fraction of Natural Gas Use Converted to Other Fuels","Electrify NG Processes",[0,0.5],"Industrial Electrification"),
-	(False,"Fraction of Methane Capture Opportunities Achieved","Methane Capture",[0,1],"Methane Capture and Destruction"),
-	(False,"Fraction of Methane Destruction Opportunities Achieved","Methane Destruction",[0,1],"Methane Capture and Destruction"),
-	(False,"Fraction of F Gases Avoided","Reduce F-gases",[0,1],"Reduce F-gases"),
-	(False,"Fraction of Addressable Process Emissions Avoided via Worker Training","Worker Training",[0,1],"Worker Training"),
-
-	# Agriculture, Land Use, and Forestry Policies
-	(False,"Fraction of Afforestation and Reforestation Achieved","Afforestation and Reforestation",[0,1],"Afforestation and Reforestation"),
-	(False,"Fraction of Forest Set Asides Achieved","Forest Set-Asides",[0,1],"Forest Set-Asides"),
-	(False,"Fraction of Abatement from Cropland Management Achieved","Cropland Management",[0,1],"Cropland Management"),
-	(False,"Fraction of Improved Forest Management Achieved","Improved Forest Management",[0,1],"Improved Forest Management"),
-	(False,"Fraction of Abatement from Livestock Measures Achieved","Livestock Measures",[0,1],"Livestock Measures"),
-	(False,"Fraction of Abatement from Rice Cultivation Measures Achieved","Rice Cultivation Measures",[0,1],"Rice Cultivation Measures"),
-
-	# District Heat Sector Policies
-	(False,"Fraction of Non CHP Heat Production Converted to CHP","Convert Non-CHP Heat Production",[0,1],"Convert Non-CHP Heat Production"),
-	(False,"Fraction of District Heat Hard Coal Use Converted to Other Fuels","Hard Coal to NG Switching",[0,1],"District Heat Fuel Switching"),
-
-	# Cross-Sector Policies
-	(False,"Fraction of Potential Additional CCS Achieved","Carbon Capture and Sequestration",[0,1],"Carbon Capture and Sequestration"),
-	(False,"Carbon Tax[transportation sector]","Carbon Tax - Transportation Sector",[0,300],"Carbon Tax"),
-	(False,"Carbon Tax[electricity sector]","Carbon Tax - Electricity Sector",[0,300],"Carbon Tax"),
-	(False,"Carbon Tax[residential buildings sector]","Carbon Tax - Residential Bldg Sector",[0,300],"Carbon Tax"),
-	(False,"Carbon Tax[commercial buildings sector]","Carbon Tax - Commercial Bldg Sector",[0,300],"Carbon Tax"),
-	(False,"Carbon Tax[industry sector]","Carbon Tax - Industry Sector",[0,300],"Carbon Tax"),
-	(False,"Percent Reduction in BAU Subsidies[hard coal]","End Existing Subsidies - Hard Coal",[0,1],"End Existing Subsidies"),
-	(False,"Percent Reduction in BAU Subsidies[natural gas]","End Existing Subsidies - Natural Gas",[0,1],"End Existing Subsidies"),
-	(False,"Percent Reduction in BAU Subsidies[nuclear]","End Existing Subsidies - Nuclear",[0,1],"End Existing Subsidies"),
-	(False,"Percent Reduction in BAU Subsidies[solar]","End Existing Subsidies - Solar",[0,1],"End Existing Subsidies"),
-	(False,"Percent Reduction in BAU Subsidies[petroleum gasoline]","End Existing Subsidies - Petroleum Gasoline",[0,1],"End Existing Subsidies"),
-	(False,"Percent Reduction in BAU Subsidies[petroleum diesel]","End Existing Subsidies - Petroleum Diesel",[0,1],"End Existing Subsidies"),
-	(False,"Additional Fuel Tax Rate by Fuel[electricity]","Fuel Taxes - Electricity",[0,0.2],"Fuel Taxes"),
-	(False,"Additional Fuel Tax Rate by Fuel[hard coal]","Fuel Taxes - Hard Coal",[0,0.2],"Fuel Taxes"),
-	(False,"Additional Fuel Tax Rate by Fuel[natural gas]","Fuel Taxes - Natural Gas",[0,0.2],"Fuel Taxes"),
-	(False,"Additional Fuel Tax Rate by Fuel[petroleum gasoline]","Fuel Taxes - Petroleum Gasoline",[0,0.2],"Fuel Taxes"),
-	(False,"Additional Fuel Tax Rate by Fuel[petroleum diesel]","Fuel Taxes - Petroleum Diesel",[0,0.2],"Fuel Taxes"),
-
-	# Research & Development Levers
-	(False,"RnD Building Capital Cost Perc Reduction[heating]","Capital Cost Reduction - Buildings: Heating",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Capital Cost Perc Reduction[cooling and ventilation]","Capital Cost Reduction - Buildings: Cooling and Ventilation",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Capital Cost Perc Reduction[envelope]","Capital Cost Reduction - Buildings: Envelope",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Capital Cost Perc Reduction[lighting]","Capital Cost Reduction - Buildings: Lighting",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Capital Cost Perc Reduction[appliances]","Capital Cost Reduction - Buildings: Appliances",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Capital Cost Perc Reduction[other component]","Capital Cost Reduction - Buildings: Other Components",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD CCS Capital Cost Perc Reduction","Capital Cost Reduction",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[hard coal es]","Capital Cost Reduction - Electricity: Hard Coal",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[natural gas nonpeaker es]","Capital Cost Reduction - Electricity: Natural Gas Nonpeaker",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[nuclear es]","Capital Cost Reduction - Electricity: Nuclear",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[hydro es]","Capital Cost Reduction - Electricity: Hydro",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[onshore wind es]","Capital Cost Reduction - Electricity: Onshore Wind",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[solar PV es]","Capital Cost Reduction - Electricity: Solar PV",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[solar thermal es]","Capital Cost Reduction - Electricity: Solar Thermal",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[biomass es]","Capital Cost Reduction - Electricity: Biomass",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[natural gas peaker es]","Capital Cost Reduction - Electricity: Natural Gas Peaker",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[lignite es]","Capital Cost Reduction - Electricity: Lignite",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Electricity Capital Cost Perc Reduction[offshore wind es]","Capital Cost Reduction - Electricity: Offshore Wind",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[cement and other carbonates]","Capital Cost Reduction - Industry: Cement",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[natural gas and petroleum systems]","Capital Cost Reduction - Industry: Natural Gas and Petroleum",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[iron and steel]","Capital Cost Reduction - Industry: Iron and Steel",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[chemicals]","Capital Cost Reduction - Industry: Chemicals",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[mining]","Capital Cost Reduction - Industry: Mining",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[waste management]","Capital Cost Reduction - Industry: Waste Management",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[agriculture]","Capital Cost Reduction - Industry: Agriculture",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Industry Capital Cost Perc Reduction[other industries]","Capital Cost Reduction - Industry: Other Industries",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[battery electric vehicle]","Capital Cost Reduction - Vehicles: Battery Electric",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[natural gas vehicle]","Capital Cost Reduction - Vehicles: Natural Gas",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[gasoline vehicle]","Capital Cost Reduction - Vehicles: Gasoline Engine",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[diesel vehicle]","Capital Cost Reduction - Vehicles: Diesel Engine",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[plugin hybrid vehicle]","Capital Cost Reduction - Vehicles: Plug-in Hybrid",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Transportation Capital Cost Perc Reduction[nonroad vehicle]","Capital Cost Reduction - Vehicles: Non-road",[0,0.4],"RnD Capital Cost Reductions"),
-	(False,"RnD Building Fuel Use Perc Reduction[heating]","Fuel Use Reduction - Buildings: Heating",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Building Fuel Use Perc Reduction[cooling and ventilation]","Fuel Use Reduction - Buildings: Cooling and Ventilation",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Building Fuel Use Perc Reduction[lighting]","Fuel Use Reduction - Buildings: Lighting",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Building Fuel Use Perc Reduction[appliances]","Fuel Use Reduction - Buildings: Appliances",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Building Fuel Use Perc Reduction[other component]","Fuel Use Reduction - Buildings: Other Components",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD CCS Fuel Use Perc Reduction","Fuel Use Reduction",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[hard coal es]","Fuel Use Reduction - Electricity: Hard Coal",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[natural gas nonpeaker es]","Fuel Use Reduction - Electricity: Natural Gas Nonpeaker",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[nuclear es]","Fuel Use Reduction - Electricity: Nuclear",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[biomass es]","Fuel Use Reduction - Electricity: Biomass",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[natural gas peaker es]","Fuel Use Reduction - Electricity: Natural Gas Peaker",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Electricity Fuel Use Perc Reduction[lignite es]","Fuel Use Reduction - Electricity: Lignite",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[cement and other carbonates]","Fuel Use Reduction - Industry: Cement",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[natural gas and petroleum systems]","Fuel Use Reduction - Industry: Natural Gas and Petroleum",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[iron and steel]","Fuel Use Reduction - Industry: Iron and Steel",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[chemicals]","Fuel Use Reduction - Industry: Chemicals",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[mining]","Fuel Use Reduction - Industry: Mining",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[waste management]","Fuel Use Reduction - Industry: Waste Management",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[agriculture]","Fuel Use Reduction - Industry: Agriculture",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Industry Fuel Use Perc Reduction[other industries]","Fuel Use Reduction - Industry: Other Industries",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[battery electric vehicle]","Fuel Use Reduction - Vehicles: Battery Electric",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[natural gas vehicle]","Fuel Use Reduction - Vehicles: Natural Gas",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[gasoline vehicle]","Fuel Use Reduction - Vehicles: Gasoline Engine",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[diesel vehicle]","Fuel Use Reduction - Vehicles: Diesel Engine",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[plugin hybrid vehicle]","Fuel Use Reduction - Vehicles: Plug-in Hybrid",[0,0.4],"RnD Fuel Use Reductions"),
-	(False,"RnD Transportation Fuel Use Perc Reduction[nonroad vehicle]","Fuel Use Reduction - Vehicles: Non-road",[0,0.4],"RnD Fuel Use Reductions")
 )
 
 # Building the Policy List
@@ -307,11 +360,9 @@ f = open(OutputScript, 'w')
 f.write('SPECIAL>LOADMODEL|"' + ModelFile + '"\n')
 f.write("SIMULATE>RUNNAME|" + RunName + "\n")
 
-# The following options may be useful in certain cases, but they cause Vensim to
-# produce an output window for each simulation that acknowledges the completion of
-# the command.  These output windows accumulate over the course of many runs and
-# cause slow-downs (and potentially crashes).  Therefore, these lines are usually
-# best left commented out, unless you are doing only a few runs.
+# The following options may be useful in certain cases, but they may slow Vensim down
+# or increase the odds that Vensim crashes during execution of a batch of runs (though
+# it is hard to tell for sure).  These lines are usually best left commented out.
 # f.write("SPECIAL>NOINTERACTION\n")
 # f.write("SIMULATE>SAVELIST|" + OutputVarsFile + "\n")
 f.write("\n")
@@ -320,7 +371,7 @@ def PerformRunsWithEnabledGroups():
 
 	# First, we do a run with all of the groups disabled
 	f.write("MENU>RUN|O\n")
-	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|||||:")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|||" + FirstYear + "|" + FinalYear + "|:")
 	f.write("\tEnabledPolicyGroup=None")
 	f.write("\tEnabledPolicies=None\n\n")
 
@@ -344,7 +395,7 @@ def PerformRunsWithEnabledGroups():
 		
 		# We perform our run and log the output
 		f.write("MENU>RUN|O\n")
-		f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+		f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|+!||" + FirstYear + "|" + FinalYear + "|:")
 		f.write("\tEnabledPolicyGroup=" + str(EnabledGroup))
 		f.write("\tEnabledPolicies=" + EnabledPolicies + "\n\n")
 	
@@ -354,9 +405,16 @@ def PerformRunsWithEnabledGroups():
 	f.write("SIMULATE>SETVAL|Policy Implementation Schedule Selector=" + str(PolicySchedule) + "\n")
 	
 	f.write("MENU>RUN|O\n")
-	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|+!||" + FirstYear + "|" + FinalYear + "|:")
 	f.write("\tEnabledPolicyGroup=All")
-	f.write("\tEnabledPolicies=All\n\n")
+	f.write("\tEnabledPolicies=All")
+	f.write("\n")
+
+	# We instruct Vensim to delete the .vdfx file, to prevent it from getting picked up by
+	# sync software, such as DropBox or Google Drive.  If sync software locks the file,
+	# Vensim won't be able to overwrite it on the next model run, ruining the batch.
+	f.write("FILE>DELETE|" + RunName + ".vdfx")
+	f.write("\n\n")
 	
 def PerformRunsWithDisabledGroups():
 
@@ -368,7 +426,7 @@ def PerformRunsWithDisabledGroups():
 	f.write("SIMULATE>SETVAL|Policy Implementation Schedule Selector=" + str(PolicySchedule) + "\n")
 	
 	f.write("MENU>RUN|O\n")
-	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|||||:")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|||" + FirstYear + "|" + FinalYear + "|:")
 	f.write("\tDisabledPolicyGroup=None")
 	f.write("\tDisabledPolicies=None\n\n")
 
@@ -393,15 +451,22 @@ def PerformRunsWithDisabledGroups():
 		
 		# We perform our run and log the output
 		f.write("MENU>RUN|O\n")
-		f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+		f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|+!||" + FirstYear + "|" + FinalYear + "|:")
 		f.write("\tDisabledPolicyGroup=" + str(DisabledGroup))
 		f.write("\tDisabledPolicies=" + DisabledPolicies + "\n\n")
 	
 	# Finally, we do a run with all of the groups disabled (a BAU case run)
 	f.write("MENU>RUN|O\n")
-	f.write("MENU>VDF2TAB|" + RunName + ".vdf|" + RunResultsFile + "|" + OutputVarsFile + "|+!||||:")
+	f.write("MENU>VDF2TAB|" + RunName + ".vdfx|" + RunResultsFile + "|" + OutputVarsFile + "|+!||" + FirstYear + "|" + FinalYear + "|:")
 	f.write("\tDisabledPolicyGroup=All")
-	f.write("\tDisabledPolicies=All\n\n")
+	f.write("\tDisabledPolicies=All")
+	f.write("\n")
+
+	# We instruct Vensim to delete the .vdfx file, to prevent it from getting picked up by
+	# sync software, such as DropBox or Google Drive.  If sync software locks the file,
+	# Vensim won't be able to overwrite it on the next model run, ruining the batch.
+	f.write("FILE>DELETE|" + RunName + ".vdfx")
+	f.write("\n\n")
 	
 if EnableOrDisableGroups == "Enable":
 	PerformRunsWithEnabledGroups()

@@ -1,0 +1,16 @@
+Additional LCFS Percentage = 0.02
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 0.68
+Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 1
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = 0.35
+Additional Minimum Required EV Sales Percentage[freight,HDVs] = 0.30
+Carbon Tax[transportation sector] = 27.6
+Carbon Tax[electricity sector] = 27.6
+Carbon Tax[residential buildings sector] = 27.6
+Carbon Tax[commercial buildings sector] = 27.6
+Carbon Tax[industry sector] = 27.6
+Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,LDVs] = 0.24842
+Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,HDVs] = 0.077284
+Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,LDVs] = 0.077284
+Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,HDVs] = 0.048267
+Fraction of TDM Package Implemented[passenger] = 0.454
+Policy Implementation Schedule Selector = 3
