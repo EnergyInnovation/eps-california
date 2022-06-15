@@ -5,9 +5,12 @@ title:	"California EPS Version History"
 This page tracks updates that have been made with each version of the California Energy Policy Simulator.
 
 
-### **3.3.1 - June 7, 2022**
+### **3.3.1 - June 16, 2022**
 
-
+* New Input Data
+  * Completely updated the input data and extended the time horizon from 2030 to 2050
+  * New data uses a mix of CEC projections, E3 Pathways data, and other publicly available sources to project future energy demand and emissions.
+  
 * New Input-Output Model
   * An economic input/output (I/O) model has been added as a component of the Energy Policy Simulator.
   * New output metrics include the change in gross domestic product (GDP), employment (jobs), total employee compensation, average compensation per employee, number of union and non-union jobs, government spending, budget deficit/surplus, household tax revenue, payroll tax revenue, corporate income tax revenue, size of the national debt, and interest paid on the national debt.
