@@ -13,7 +13,7 @@ The California Energy Policy Simulator may be used on this website through your 
 
 ## Findings
 
-Energy Innovation released a report, [California Energy Policy Simulator Update: Earlier Action Delivers Social and Economic Benefits](https://energyinnovation.org/publication/california-energy-policy-simulator-3-3-1-update-earlier-action-delivers-social-and-economic-benefits/), which explores the current state policy mix and options for deeper decarbonization using the California EPS. Full documentation for the scenario assumptions can be found at the documentation links below.
+Energy Innovation released a report, [California Energy Policy Simulator Update: Earlier Action Delivers Social and Economic Benefits](https://energyinnovation.org/publication/california-energy-policy-simulator-update-earlier-action-delivers-social-and-economic-benefits/), which explores the current state policy mix and options for deeper decarbonization using the California EPS. Full documentation for the scenario assumptions can be found at the documentation links below.
 
 ## Documentation
 
