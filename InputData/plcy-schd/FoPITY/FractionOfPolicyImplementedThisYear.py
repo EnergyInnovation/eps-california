@@ -187,7 +187,7 @@ PolicyElements = (
   ),
   (("trans EV minimum","freight","LDVs"),
     ("Schedule 1",(2020,0),(2022,0),(2050,1)),
-    ("Schedule 2",(2020,0),(2022,0),(2030,.35),(2050,1)),
+    ("Schedule 2",(2020,0),(2022,0),(2030,.68),(2050,1)),
     ("Schedule 7",(2020,0),(2028,0),(2040,1),(2050,1)),
   ),
   (("trans EV minimum","freight","HDVs"),
