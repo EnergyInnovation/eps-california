@@ -1,7 +1,7 @@
-Additional Minimum Required EV Sales Percentage[passenger,LDVs] = 1
+Additional Minimum Required EV Sales Percentage[passenger,LDVs] = .35
 Additional Minimum Required EV Sales Percentage[passenger,HDVs] = 1
 Additional Minimum Required EV Sales Percentage[passenger,motorbikes] = 1
-Additional Minimum Required EV Sales Percentage[freight,LDVs] = 1
+Additional Minimum Required EV Sales Percentage[freight,LDVs] = .35
 Additional Minimum Required EV Sales Percentage[freight,HDVs] = .6
 Additional Minimum Required EV Sales Percentage[freight,motorbikes] = .6
 Boolean Rebate Program for Efficient Components[heating] = 1
