@@ -1,22 +1,22 @@
-Unit: dimensionless (priority),production,imports,exports,
-electricity (not used in this variable),0.0,0.0,0.0,
-hard coal,1.0,3.0,2.0,
-natural gas,1.0,3.0,2.0,
-nuclear,2.0,1.0,3.0,
-hydro (is not a fuel),0.0,0.0,0.0,
-wind (is not a fuel),0.0,0.0,0.0,
-solar (is not a fuel),0.0,0.0,0.0,
-biomass,1.0,3.0,2.0,
-petroleum gasoline,1.0,3.0,2.0,
-petroleum diesel,1.0,3.0,2.0,
-biofuel gasoline,1.0,3.0,2.0,
-biofuel diesel,1.0,2.0,3.0,
-jet fuel or kerosene,1.0,3.0,2.0,
-heat (not used in this variable),0.0,0.0,0.0,
-geothermal (is not a fuel),0.0,0.0,0.0,
-lignite,1.0,3.0,2.0,
-crude oil,2.0,1.0,3.0,
-heavy fuel oil,1.0,3.0,2.0,
-LPG propane or butane,1.0,3.0,2.0,
-municipal solid waste,1.0,3.0,2.0,
-hydrogen,1.0,3.0,2.0,
+Unit: dimensionless (priority),production,imports,exports
+electricity (not used in this variable),0.0,0.0,0.0
+hard coal,1.0,3.0,2.0
+natural gas,3.0,1.0,2.0
+nuclear,2.0,1.0,3.0
+hydro (is not a fuel),0.0,0.0,0.0
+wind (is not a fuel),0.0,0.0,0.0
+solar (is not a fuel),0.0,0.0,0.0
+biomass,1.0,3.0,2.0
+petroleum gasoline,1.0,3.0,2.0
+petroleum diesel,1.0,3.0,2.0
+biofuel gasoline,1.0,3.0,2.0
+biofuel diesel,1.0,2.0,3.0
+jet fuel or kerosene,1.0,3.0,2.0
+heat (not used in this variable),0.0,0.0,0.0
+geothermal (is not a fuel),0.0,0.0,0.0
+lignite,1.0,3.0,2.0
+crude oil,2.0,1.0,3.0
+heavy fuel oil,1.0,3.0,2.0
+LPG propane or butane,1.0,3.0,2.0
+municipal solid waste,1.0,3.0,2.0
+hydrogen,1.0,3.0,2.0
