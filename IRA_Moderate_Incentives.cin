@@ -14,25 +14,10 @@ Subsidy for Elec Production by Fuel[nuclear es,preexisting retiring] = 12
 Subsidy for Elec Production by Fuel[nuclear es,newly built] = 12
 Subsidy for Elec Production by Fuel[onshore wind es,newly built] = 7.57
 Subsidy for Elec Production by Fuel[solar PV es,newly built] = 6.25
-GRA for Carbon Tax Revenue[deficit spending] = 0
-GRA for Carbon Tax Revenue[household taxes] = 0
-GRA for Carbon Tax Revenue[payroll taxes] = 0
-GRA for Distributed Solar Subsidy[deficit spending] = 0
-GRA for Electricity Capacity Construction Subsidies[deficit spending] = 0
-GRA for Electricity Generation Subsidies[deficit spending] = 0
-GRA for EV Subsidy[deficit spending] = 0
-GRA for Fuel Subsidies[deficit spending] = 0
-GRA for Fuel Tax Revenue[deficit spending] = 0
-GRA for National Debt Interest[regular spending] = 0
-GRA for National Debt Interest[household taxes] = 0
-GRA for Carbon Tax Revenue[corporate taxes] = 5
-GRA for Distributed Solar Subsidy[corporate taxes] = 5
 GRA for Electricity Capacity Construction Subsidies[corporate taxes] = 5
+GRA for Electricity Capacity Construction Subsidies[deficit spending] = 0
 GRA for Electricity Generation Subsidies[corporate taxes] = 5
-GRA for EV Subsidy[corporate taxes] = 5
-GRA for Fuel Subsidies[corporate taxes] = 5
-GRA for Fuel Tax Revenue[corporate taxes] = 5
-GRA for National Debt Interest[corporate taxes] = 5
+GRA for Electricity Generation Subsidies[deficit spending] = 0
 Renewable Portfolio Std Percentage = 0.9695
 
 
