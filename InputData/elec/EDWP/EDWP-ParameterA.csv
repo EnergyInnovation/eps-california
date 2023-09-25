@@ -1,0 +1,25 @@
+Unit: dimensionless,Weibull Parameter A (Scale Parameter)
+hard coal,2
+natural gas steam turbine,1.5
+natural gas combined cycle,1.7
+nuclear,1
+hydro,1
+wind,1
+solar PV,1
+solar thermal,1
+biomass,2
+geothermal,1
+petroleum,1.5
+natural gas peaker,1.6
+lignite,2
+offshore wind,1
+crude oil,1.5
+heavy or residual fuel oil,1.5
+municipal solid waste,1
+hard coal w CCS,2
+natural gas combined cycle w CCS,1.7
+biomass w CCS,2
+lignite w CCS,2
+small modular reactor,1
+hydrogen combustion turbine,1.6
+hydrogen combined cycle,1.7
