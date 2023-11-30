@@ -1,10 +1,5 @@
 ,Fraction of Forest Owned (dimensionless)
-government,0.423841059602649
-nonenergy industries,0.5281456953642384
-labor and consumers,0.048013245033112585
-foreign entities,0.0
-electricity suppliers,0.0
-coal suppliers,0.0
-natural gas and petroleum suppliers,0.0
-biomass and biofuel suppliers,0.0
-other energy suppliers,0.0
+government,0.424
+domestic industries,0.528
+labor and consumers,0.048
+foreign entities,0
