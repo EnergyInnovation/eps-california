@@ -1,25 +1,25 @@
-,Minimum Capacity (MW)
-hard coal,50.0
-natural gas steam turbine,50.0
-natural gas combined cycle,50.0
-nuclear,500.0
-hydro,1.0
-onshore wind,5.0
-solar PV,2.0
-solar thermal,100.0
-biomass,3.0
-geothermal,10.0
-petroleum,50.0
-natural gas peaker,50.0
-lignite,50.0
-offshore wind,5.0
-crude oil,50.0
-heavy or residual fuel oil,50.0
-municipal solid waste,10.0
-hard coal w CCS,50.0
-natural gas combined cycle w CCS,50.0
-biomass w CCS,1.0
-lignite w CCS,50.0
-small modular reactor,20.0
-hydrogen combustion turbine,50.0
-hydrogen combined cycle,50.0
+﻿,Minimum Capacity (MW)
+hard coal,50
+natural gas steam turbine,50
+natural gas combined cycle,50
+nuclear,500
+hydro,1
+onshore wind,5
+solar PV,2
+solar thermal,100
+biomass,3
+geothermal,10
+petroleum,50
+natural gas peaker,50
+lignite,50
+offshore wind,5
+crude oil,50
+heavy or residual fuel oil,50
+municipal solid waste,10
+hard coal w CCS,500
+natural gas combined cycle w CCS,500
+biomass w CCS,500
+lignite w CCS,500
+small modular reactor,20
+hydrogen combustion turbine,50
+hydrogen combined cycle,50
