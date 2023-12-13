@@ -1,5 +1,5 @@
 Unit: dimensionless (share of vehicles),LDVs,HDVs,aircraft,rail,ships,motorbikes
-Alabama,1.0,1.0,1.0,1.0,1.0,1.0
+Alabama,1.0,1.0,1.0,1.0,1.0,0.0
 Alaska ,0.0,0.0,0.0,0.0,0.0,0.0
 Arizona,0.0,0.0,0.0,0.0,0.0,0.0
 Arkansas,0.0,0.0,0.0,0.0,0.0,0.0
