@@ -1,0 +1,22 @@
+Unit: dimensionless (priority),production,imports,exports
+electricity (not used in this variable),0.0,0.0,0.0
+hard coal,3.0,2.0,1.0
+natural gas,3.0,2.0,1.0
+nuclear,3.0,2.0,1.0
+hydro (is not a fuel),0.0,0.0,0.0
+wind (is not a fuel),0.0,0.0,0.0
+solar (is not a fuel),0.0,0.0,0.0
+biomass,3.0,2.0,1.0
+petroleum gasoline,3.0,2.0,1.0
+petroleum diesel,3.0,2.0,1.0
+biofuel gasoline,3.0,2.0,1.0
+biofuel diesel,3.0,2.0,1.0
+jet fuel or kerosene,3.0,2.0,1.0
+heat (not used in this variable),0.0,0.0,0.0
+geothermal (is not a fuel),0.0,0.0,0.0
+lignite,3.0,2.0,1.0
+crude oil,3.0,2.0,1.0
+heavy fuel oil,3.0,2.0,1.0
+LPG propane or butane,3.0,2.0,1.0
+municipal solid waste,3.0,2.0,1.0
+hydrogen,1.0,3.0,2.0
