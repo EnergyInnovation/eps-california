@@ -1,7 +1,0 @@
-Vehicle type,government,industry,consumers
-LDVs,0.004,0.001,0.995
-HDVs,0.140,0.860,0
-aircraft,0,1,0
-rail,1,0,0
-ships,0,0,1
-motorbikes,0.002,0,0.998
