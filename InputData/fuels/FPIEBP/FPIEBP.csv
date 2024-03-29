@@ -1,6 +1,6 @@
 Unit: dimensionless (priority),production,imports,exports
 electricity (not used in this variable),0.0,0.0,0.0
-hard coal,3.0,2.0,1.0
+hard coal,1.0,3.0,2.0
 natural gas,3.0,2.0,1.0
 nuclear,3.0,2.0,1.0
 hydro (is not a fuel),0.0,0.0,0.0
