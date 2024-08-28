@@ -12,11 +12,11 @@ petroleum diesel,0.0
 biofuel gasoline,0.0
 biofuel diesel,0.0
 jet fuel or kerosene,0.0
-heat,0.0
+heat,1.0
 geothermal (is not a fuel),0.0
 lignite,0.0
 crude oil,0.0
 heavy fuel oil,0.0
 LPG propane or butane,0.0
 municipal solid waste (NOT USED),0.0
-hydrogen,1.0
+hydrogen,0.0
