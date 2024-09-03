@@ -2,6 +2,7 @@
 *.vdf
 *.vdfx
 *.4vmfx
+*.dat
 
 # Vensim sensitivity simulation parameters (Vensim Sensitivity Control)
 *.vsc
