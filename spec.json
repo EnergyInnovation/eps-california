@@ -169,13 +169,7 @@
     "_total_energy_market_and_ces_revenue_and_variable_subsidies_by_optimization_pass_for_hybrid_power_plants": "_optimization_pass",
     "_total_new_and_retrofit_capacity_desired_due_to_cost_effectiveness_by_optimization_pass": "_optimization_pass",
     "_total_new_capacity_desired_due_to_cost_effectiveness_by_optimization_pass": "_optimization_pass",
-    "_weighted_average_round_trip_efficiency_for_diurnal_shifting_including_hybrid_batteries": "_optimization_pass",
-    "_bau_amount_spent_on_electricity_fuels_mapped_to_all_fuels_subscript": "_all_fuels",
-    "_bau_total_energy_use_by_sector": "_all_fuels",
-    "_electricity_sector_change_in_fuel_industry_cash_flow_mapped_to_all_fuels_subscript": "_all_fuels",
-    "_output_fuel_costs_per_unit_energy_by_sector": "_all_fuels",
-    "_total_energy_use_by_sector": "_all_fuels",
-    "_hoiptp_health_outcome_incidence_per_ton_pollutant": "_sectors"
+    "_weighted_average_round_trip_efficiency_for_diurnal_shifting_including_hybrid_batteries": "_optimization_pass"
   },
   "dimensionFamilies": {
     "NGPS industry fuel within all fuels": "All Fuels",
