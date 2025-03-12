@@ -21,7 +21,7 @@ Additional Subsidy for Elec CCS[biomass w CCS es] = 81.6
 Additional Subsidy for Elec CCS[lignite w CCS es] = 81.6
 Additional Subsidy for Vehicle Battery Production = 42.29
 Additional Subsidy for Grid Battery Production = 42.29
-Annual Additional Capacity Retired due to Early Retirement Policy[hard coal es] = 0
+Annual Additional Capacity Retired due to Early Retirement Policy[hard coal es] =0
 Boolean Ban New Power Plants[hard coal es] = 1
 Boolean Ban New Power Plants[natural gas combined cycle es] = 1
 Boolean Ban New Power Plants[nuclear es] = 1
@@ -187,7 +187,6 @@ Fraction of Eligible Industrial Energy Use Shifted to Electricity[construction 4
 Fraction of Eligible Industrial Energy Use Shifted to Electricity[construction 41T43,cooling] = 0.744
 Fraction of Eligible Industrial Energy Use Shifted to Electricity[construction 41T43,machine drive] = 0.744
 Fraction of Eligible Industrial Energy Use Shifted to Electricity[construction 41T43,other processes] = 0.744
-Fraction of Enhanced Rock Weathering Potential Achieved = 0.4
 Fraction of F Gas Destruction Achieved = 1
 Fraction of F Gas Inspct Maint Retrofit Achieved[chemicals 20] = 1
 Fraction of F Gas Inspct Maint Retrofit Achieved[other metals 242] = 1
