@@ -1,0 +1,25 @@
+,Seed Capacity (MW)
+hard coal,250.0
+natural gas steam turbine,250.0
+natural gas combined cycle,4152.2
+nuclear,500.0
+hydro,250.0
+onshore wind,1954.5
+solar PV,2765.5
+solar thermal,250.0
+biomass,250.0
+geothermal,250.0
+petroleum,250.0
+natural gas peaker,2737.4
+lignite,250.0
+offshore wind,250.0
+crude oil,250.0
+heavy or residual fuel oil,250.0
+municipal solid waste,250.0
+hard coal w CCS,250.0
+natural gas combined cycle w CCS,250.0
+biomass w CCS,250.0
+lignite w CCS,250.0
+small modular reactor,250.0
+hydrogen combustion turbine,250.0
+hydrogen combined cycle,250.0
