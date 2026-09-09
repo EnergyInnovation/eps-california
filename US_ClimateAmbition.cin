@@ -361,7 +361,3 @@ Additional Minimum Required ZEV Sales Percentage for Model Region[freight,HDVs] 
 Additional Perc Subsidy for Distributed Solar PV Capacity[urban residential] = 0.3
 Additional Perc Subsidy for Distributed Solar PV Capacity[rural residential] = 0.3
 Additional Perc Subsidy for Distributed Solar PV Capacity[commercial] = 0.3
-Boolean Use Non BAU Minimum Required ZEV Sales Percentage by Subregion[passenger,LDVs]  = 1
-Boolean Use Non BAU Minimum Required ZEV Sales Percentage by Subregion[freight,LDVs]  = 1
-Boolean Use Non BAU Minimum Required ZEV Sales Percentage by Subregion[passenger,HDVs]  = 1
-Boolean Use Non BAU Minimum Required ZEV Sales Percentage by Subregion[freight,HDVs]  = 1
